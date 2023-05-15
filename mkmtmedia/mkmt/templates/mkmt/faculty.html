@@ -1,0 +1,181 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'mkmt/styles/styleFaculty.css' %}" />
+    <link rel="stylesheet" href="{% static 'mkmt/styles/wrapper.css' %}" />
+    <link rel="stylesheet" href="{% static 'mkmt/styles/header.css' %}" />
+    <link rel="stylesheet" href="{% static 'mkmt/styles/burger.css' %}" />
+    <link rel="stylesheet" href="{% static 'mkmt/styles/footer.css' %}" />
+    <link rel="stylesheet" href="{% static 'mkmt/styles/slider.css' %}" />
+    <title>О факультете</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header_container">
+                <a href="index.html">
+                    <div class="header_name_and_logo">
+                        <img class="logotype" src="{% static 'mkmt/styles/images/Vector.svg' %}" alt="Логотип" />
+                        <p class="nameFaculty">Факультет Медиакоммуникаций
+                            и мультимедийных технологий
+                            Донского государственного
+                            технического факультета
+                        </p>
+                    </div>
+                </a>
+                <div class="burger-menu">
+                    <a href="" class="burger-menu_button">
+                        <spun class="burger-menu_lines"></spun>
+                    </a>
+                    <nav class="burger-menu_nav">
+                        <a href="index.html" class="burger-menu_link">Главное</a>
+                        <a href="faculty.html" class="burger-menu_link">О факультете</a>
+                        <a href="education.html" class="burger-menu_link">Образование</a>
+                        <a href="#" class="burger-menu_link">Портфолио</a>
+                        <a href="contacts.html" class="burger-menu_link">Контакты</a>
+                    </nav>
+                    <div class="burger-menu_overlay"></div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <!-- width="1920"
+                        height="1080" -->
+            <div class="promo-container">
+                <div class="promo">
+                    <div class="video">
+                        
+                    </div>
+                    <div class="description">
+                        <iframe class="videoframe" src="https://vk.com/video_ext.php?oid=-43750853&id=456239255&hash=400b4dee2781deff&hd=1&autoplay=1"
+                        width="100%"
+                        allow="autoplay;
+                        encrypted-media;
+                        fullscreen;
+                        picture-in-picture;"
+                        frameborder="0"
+                        allowfullscreen>
+                        </iframe>
+                        <p class="decription__paragraph"><span>Факультет «Медиакоммуникации и мультимедийные технологии» ДГТУ основан 16 марта 2012 г.
+                                на базе кафедры «Массовые коммуникации и мультимедийные технологии»,
+                                которая была учреждена Университетом совместно с Группой компаний «Южный Регион» 30
+                                ноября 2010 г. как пример успешного взаимодействия бизнеса и образования.</span><br />
+                            <span>Миссия факультета - развитие новых рынков сквозных технологий и креативных индустрий
+                                через формирование ответственных, творческих, проактивных и
+                                готовых к постоянному саморазвитию профессионалов в медиакоммуникациях, информационных и
+                                мультимедийных технологиях, творчестве и арт-менеджменте.</span><br />
+                            <span>Число обучающихся: 1500 человек</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <a name="areas_of_study"></a>
+            <div class="main_block">
+                <h2 class="main_block_caption">Сферы обучения:</h2>
+                <div class="main_block_item">
+                    <ul class="main_block_item_list">
+                        <li>IT, разработка игр, мобильных приложений (IOS, Android)</li>
+                        <li>Анимация, мультипликация, 2 и 3D-графика</li>
+                        <li>Видео, фото, аудиопродакшн</li>
+                        <li>Дизайн, Web-дизайн</li>
+                        <li>Продюсирование</li>
+                        <li> Маркетинг, СММ</li>
+                        <li>Медиаменеджмент</li>
+                        <li>Пиар, реклама, связи с общественностью</li>
+                        <li>Музыкальное, хореографическое и художественное творчество</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="carousel">
+                <div class="carousel_preview">
+                    <button class="carousel_left_btn arw-left"><img src="{% static 'mkmt/styles/images/leftBTN.svg' %}" /></button>
+                    <h2 class="carousel_teh">Техническое оснащение</h2>
+                    <button class="carousel_right_btn arw-right"><img src="{% static 'mkmt/styles/images/rightBTN.svg' %}" /></button>
+                </div>
+                <a name="technical_equipment"></a>
+                <div class="slider">
+                    <div class="slider_line crsl">
+                        <div class="card_">
+                            <img class="card_photo" src="{% static 'mkmt/styles/images/facultyPage/catPhoto.jpg' %}" />
+                            <p class="card_description">Мультимедийные фото и звуковая студии</p>
+                        </div>
+                        <div class="card_">
+                            <img class="card_photo" src="{% static 'mkmt/styles/images/facultyPage/catPhotoTwo.jpg' %}" />
+                            <p class="card_description">Радиостудия</p>
+                        </div>
+                        <div class="card_">
+                            <img class="card_photo" src="{% static 'mkmt/styles/images/facultyPage/photoForest.jpg' %}" />
+                            <p class="card_description">5 компьютерных классов с предустановленным пакетом ПО</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="footer_main">
+                <a href="index.html"><h3 class="footer_header">Главное</h3></a>
+                <ul class="footer_main_sub">
+                    <li><a>Кафедры</a></li>
+                    <li><a>Лица факультета</a></li>
+                    <li><a>Партнеры</a></li>
+                </ul>
+            </div>
+            <div class="footer_faculty">
+                <a href="faculty.html"><h3 class="footer_header">О факультете</h3></a>
+                <ul class="footer_faculty_sub">
+                    <li><a href="#areas_of_study">Сферы обучения</a></li>
+                    <li><a href="#technical_equipment">Техническое оснащение</a></li>
+                </ul>
+            </div>
+            <div class="footer_education">
+                <a href="education.html"><h3 class="footer_header">Образование</h3></a>
+                <ul class="footer_education_sub">
+                    <li><a>Бакалавриат</a></li>
+                    <li><a>Магистратура</a></li>
+                </ul>
+            </div>
+            <div class="footer_portfolio">
+                <h3 class="footer_header">Портфолио</h3>
+                <ul class="footer_portfolio_sub">
+                    <li><a>3D</a></li>
+                    <li><a>Анимация</a></li>
+                    <li><a>Аудио</a></li>
+                    <li class="footer_sub_more">Еще <img src="{% static 'mkmt/styles/images/more_button.svg' %}" />
+                        <ul class="sub_more_more">
+                            <li><a>ABC</a></li>
+                            <li><a>DEF</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer_contacts">
+                <a href="contacts.html"><h3 class="footer_header">Контакты</h3></a>
+                <ul class="footer_contacts_sub">
+                    <li><a>Факультет МКиМТ</a></li>
+                    <li><a>Декан факультета</a></li>
+                    <li><a>Деканат</a></li>
+                    <li class="footer_sub_more">Еще <img src="{% static 'mkmt/styles/images/more_button.svg" />
+                        <ul class="sub_more_more">
+                            <li><a>ABC</a></li>
+                            <li><a>DEF</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="{% static 'mkmt/scripts/scriptFaculty.js' %}"></script>
+</body>
+
+</html>
