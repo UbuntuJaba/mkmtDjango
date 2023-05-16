@@ -20,7 +20,7 @@
     <div class="wrapper">
         <header class="header">
             <div class="header_container">
-                <a href="index.html">
+                <a href="{% url 'index' %}">
                     <div class="header_name_and_logo">
                         <img class="logotype" src="{% static 'mkmt/styles/images/Vector.svg' %}" alt="Логотип" />
                         <p class="nameFaculty">Факультет Медиакоммуникаций
@@ -35,11 +35,11 @@
                         <spun class="burger-menu_lines"></spun>
                     </a>
                     <nav class="burger-menu_nav">
-                        <a href="index.html" class="burger-menu_link">Главное</a>
-                        <a href="faculty.html" class="burger-menu_link">О факультете</a>
-                        <a href="education.html" class="burger-menu_link">Образование</a>
+                        <a href="{% url 'index' %}" class="burger-menu_link">Главное</a>
+                        <a href="{% url 'faculty' %}" class="burger-menu_link">О факультете</a>
+                        <a href="{% url 'education' %}" class="burger-menu_link">Образование</a>
                         <a href="#" class="burger-menu_link">Портфолио</a>
-                        <a href="contacts.html" class="burger-menu_link">Контакты</a>
+                        <a href="{% url 'contacts' %}" class="burger-menu_link">Контакты</a>
                     </nav>
                     <div class="burger-menu_overlay"></div>
                 </div>
@@ -504,7 +504,7 @@
         </div>
         <footer class="footer">
             <div class="footer_main">
-                <a href="index.html"><h3 class="footer_header">Главное</h3></a>
+                <a href="{% url 'index' %}"><h3 class="footer_header">Главное</h3></a>
                 <ul class="footer_main_sub">
                     <li><a>Кафедры</a></li>
                     <li><a>Лица факультета</a></li>
@@ -512,14 +512,14 @@
                 </ul>
             </div>
             <div class="footer_faculty">
-                <a href="faculty.html"><h3 class="footer_header">О факультете</h3></a>
+                <a href="{% url 'faculty' %}"><h3 class="footer_header">О факультете</h3></a>
                 <ul class="footer_faculty_sub">
                     <li><a>Сферы обучения</a></li>
                     <li><a>Техническое оснащение</a></li>
                 </ul>
             </div>
             <div class="footer_education">
-                <a href="education.html"><h3 class="footer_header">Образование</h3></a>
+                <a href="{% url 'education' %}"><h3 class="footer_header">Образование</h3></a>
                 <ul class="footer_education_sub">
                     <li><a>Бакалавриат</a></li>
                     <li><a>Магистратура</a></li>
@@ -540,7 +540,7 @@
                 </ul>
             </div>
             <div class="footer_contacts">
-                <a href="contacts.html"><h3 class="footer_header">Контакты</h3></a>
+                <a href="{% url 'contacts' %}"><h3 class="footer_header">Контакты</h3></a>
                 <ul class="footer_contacts_sub">
                     <li><a href="#faculty">Факультет МКиМТ</a></li>
                     <li><a href="#dean_of_the_faculty">Декан факультета</a></li>

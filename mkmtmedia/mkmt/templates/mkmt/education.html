@@ -24,7 +24,7 @@
     <div class="wrapper">
         <header class="header">
             <div class="header_container">
-                <a href="index.html">
+                <a href="{% url 'index' %}">
                     <div class="header_name_and_logo">
                         <img class="logotype" src="{% static 'mkmt/styles/images/Vector.svg' %}" alt="Логотип" />
                         <p class="nameFaculty">Факультет Медиакоммуникаций
@@ -39,11 +39,11 @@
                         <spun class="burger-menu_lines"></spun>
                     </a>
                     <nav class="burger-menu_nav">
-                        <a href="index.html" class="burger-menu_link">Главное</a>
-                        <a href="faculty.html" class="burger-menu_link">О факультете</a>
-                        <a href="education.html" class="burger-menu_link">Образование</a>
+                        <a href="{% url 'index' %}" class="burger-menu_link">Главное</a>
+                        <a href="{% url 'faculty' %}" class="burger-menu_link">О факультете</a>
+                        <a href="{% url 'education' %}" class="burger-menu_link">Образование</a>
                         <a href="#" class="burger-menu_link">Портфолио</a>
-                        <a href="contacts.html" class="burger-menu_link">Контакты</a>
+                        <a href="{% url 'contacts' %}" class="burger-menu_link">Контакты</a>
                     </nav>
                     <div class="burger-menu_overlay"></div>
                 </div>
@@ -565,28 +565,24 @@
 
         </div>
 
-
-
-
-
         <footer class="footer">
             <div class="footer_main">
-                <h3 class="footer_header">Главное</h3>
+                <a href="{% url 'index' %}"><h3 class="footer_header">Главное</h3></a>
                 <ul class="footer_main_sub">
-                    <li><a>Наши преимущества</a></li>
+                    <li><a>Кафедры</a></li>
                     <li><a>Лица факультета</a></li>
                     <li><a>Партнеры</a></li>
                 </ul>
             </div>
             <div class="footer_faculty">
-                <h3 class="footer_header">О факультете</h3>
+                <a href="{% url 'faculty' %}"><h3 class="footer_header">О факультете</h3></a>
                 <ul class="footer_faculty_sub">
                     <li><a>Сферы обучения</a></li>
                     <li><a>Техническое оснащение</a></li>
                 </ul>
             </div>
             <div class="footer_education">
-                <h3 class="footer_header">Образование</h3>
+                <a href="{% url 'education' %}"><h3 class="footer_header">Образование</h3></a>
                 <ul class="footer_education_sub">
                     <li><a>Бакалавриат</a></li>
                     <li><a>Магистратура</a></li>
@@ -598,7 +594,7 @@
                     <li><a>3D</a></li>
                     <li><a>Анимация</a></li>
                     <li><a>Аудио</a></li>
-                    <li class="footer_sub_more">Еще <img src="./styles/images/more_button.svg" />
+                    <li class="footer_sub_more">Еще <img src="{% static 'mkmt/styles/images/more_button.svg' %}" />
                         <ul class="sub_more_more">
                             <li><a>ABC</a></li>
                             <li><a>DEF</a></li>
@@ -607,12 +603,12 @@
                 </ul>
             </div>
             <div class="footer_contacts">
-                <h3 class="footer_header">Контакты</h3>
+                <a href="{% url 'contacts' %}"><h3 class="footer_header">Контакты</h3></a>
                 <ul class="footer_contacts_sub">
                     <li><a>Факультет МКиМТ</a></li>
                     <li><a>Декан факультета</a></li>
                     <li><a>Деканат</a></li>
-                    <li class="footer_sub_more">Еще <img src="./styles/images/more_button.svg" />
+                    <li class="footer_sub_more">Еще <img src="{% static 'mkmt/styles/images/more_button.svg' %}" />
                         <ul class="sub_more_more">
                             <li><a>ABC</a></li>
                             <li><a>DEF</a></li>
