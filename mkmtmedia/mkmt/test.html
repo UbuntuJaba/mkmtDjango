@@ -1,0 +1,12 @@
+{% block content %}
+
+<ul>
+    {% for p in programs %}
+    <li>
+        <h2>{{p.title}}</h2>
+        <p>{{p.content}}</p>
+    </li>
+    {% endfor %}
+</ul>
+
+{% endblock %}
