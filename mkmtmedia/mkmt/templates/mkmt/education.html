@@ -64,14 +64,11 @@
                             <div class="d-flex col-xl-4 col-md-6 col-sm-12 justify-content-center">
                                 <div class="card my-card">
                                     <div class="card-body">
-                                        <h4 class="card-title">42.03.01 «Реклама и связь
-                                            с общественостью»</h4>
-                                        <p class="card-text text-1"><b>Форма обучения:</b> Очная</p>
-                                        <p class="card-text text-2"><b>Бюджетные места (УГНС, 2022):</b> 6</p>
-                                        <p class="card-text text-3"><b>Зеленая волна (2022):</b> 20</p>
-                                        <p class="card-text text-4"><b>Проходной балл (бюджетная основа, 2022 г.):</b>
-                                            295
-                                        </p>
+                                        <h4 class="card-title">{{program420301.title}}</h4>
+                                        <p class="card-text text-1"><b>Форма обучения:</b> {{program420301.formOfEdu}}</p>
+                                        <p class="card-text text-2"><b>Бюджетные места (УГНС, 2022):</b> {{program420301.budgetPlaces}}</p>
+                                        <p class="card-text text-3"><b>Зеленая волна (2022):</b> {{program420301.greenWave}}</p>
+                                        <p class="card-text text-4"><b>Проходной балл (бюджетная основа, 2022 г.):</b> {{program420301.passingScore}}</p>
                                         <div class="div-btn">
                                             <button type="button" class="btn my-btn btn-lg" data-bs-toggle="modal"
                                                 data-bs-target="#modalId">
@@ -628,24 +625,23 @@
         <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg" role="document">
             <div class="modal-content my-modal">
                 <div class="modal-header my-modal-title">
-                    <h5 class="text-center modal-title" id="modalTitleId">42.03.01 «Реклама и связь с общественостью»
+                    <h5 class="text-center modal-title" id="modalTitleId">{{program420301.title}}
                     </h5>
 
                 </div>
                 <div class="modal-body">
-                    <p><b>Профиль:</b> Разработка игр и прикладных программ</p>
-                    <p><b>Форма обучения:</b></p>
+                    <p><b>Профиль:</b> {{program420301.profile}}</p>
+                    <p><b>Форма обучения:</b> {{program420301.formOfEdu}}</p>
 
                     <p><b>Что сдавать</b> (по результатам ЕГЭ)?</p>
-                    <p>Обязательные: русский язык, профильная математика</p>
-                    <p>По выбору: информатика / физика / химия</p>
+                    <p>{{program420301.ege|linebreaks}}</p>
 
                     <p><b>Что сдавать</b> (после СПО)?</p>
-                    <p>Обязательные: русский язык, профильная математика, информационные технологии</p>
+                    <p>{{program420301.spo}}</p>
 
-                    <p><b>Бюджетные места:</b> 80</p>
-                    <p><b>Проходной балл(бюджет, 2023 г.):</b> 210</p>
-                    <p><b>Стоимость обучения (2023 г.):</b>125 900 руб</p>
+                    <p><b>Бюджетные места:</b> {{program420301.budgetPlaces}}</p>
+                    <p><b>Проходной балл(бюджет, 2023 г.):</b> {{program420301.passingScore}}</p>
+                    <p><b>Стоимость обучения (2023 г.):</b> {{program420301.priceFT}}</p>
                 </div>
 
             </div>
