@@ -46,8 +46,8 @@ def education(request):
 
 def test(request):
     # programs = studyingPrograms.objects.all()
-    program420305 = studyingPrograms.objects.get(id = '2')
-    return render(request, 'mkmt/test.html', {'program420305': program420305})
+    undergraduate = studyingPrograms.objects.all()
+    return render(request, 'mkmt/test.html', {'undergraduate': undergraduate})
 
 def contacts(request):
     return render(request, 'mkmt/contacts.html')
