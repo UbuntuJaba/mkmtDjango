@@ -17,376 +17,382 @@
     <link rel="stylesheet" href="{% static 'mkmt/styles/footer.css' %}" />
     <title>МКМТ</title>
 </head>
-<div class="wrapper">
-    <div class="main">
-        <section class="undergraduate">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <h2 class="text-center  fw-bolder mb-5  direction_title" style="padding-top:70px ;">
-                            Бакалавриат</h2>
-                    </div>
-                </div>
-                <div class="cards ">
+
+<body>
+
+    <div class="wrapper">
+        <div class="main">
+            <section class="undergraduate">
+                <div class="container">
                     <div class="row">
-                        {% for b in undergraduate %}
-                        <div class="d-flex col-xl-4 col-md-6 col-sm-12 justify-content-center">
-                            <div class="card my-card">
-                                <div class="card-body">
-                                    <h4 class="card-title">{{b.title}}</h4>
-                                    <p class="card-text text-1"><b>Форма обучения:</b> {{b.formOfEdu}}</p>
-                                    <p class="card-text text-2"><b>Бюджетные места (УГНС, 2022):</b> {{b.budgetPlaces}}
-                                    </p>
-                                    <p class="card-text text-3"><b>Зеленая волна (2022):</b> {{b.greenWave}}</p>
-                                    <p class="card-text text-4"><b>Проходной балл (бюджетная основа, 2022 г.):</b>
-                                        {{b.passingScore}}</p>
-                                    <div class="div-btn">
-                                        <button type="button" class="btn my-btn btn-lg" data-bs-toggle="modal"
-                                            data-bs-target="#{{b.Id}}">
-                                            Подробнее
-                                        </button>
+                        <div class="col-12">
+                            <h2 class="text-center  fw-bolder mb-5  direction_title" style="padding-top:70px ;">
+                                Бакалавриат</h2>
+                        </div>
+                    </div>
+                    <div class="cards ">
+                        <div class="row">
+                            {% for b in undergraduate %}
+                            <div class="d-flex col-xl-4 col-md-6 col-sm-12 justify-content-center">
+                                <div class="card my-card">
+                                    <div class="card-body">
+                                        <h4 class="card-title">{{b.title}}</h4>
+                                        <p class="card-text text-1"><b>Форма обучения:</b> {{b.formOfEdu}}</p>
+                                        <p class="card-text text-2"><b>Бюджетные места (УГНС, 2022):</b>
+                                            {{b.budgetPlaces}}
+                                        </p>
+                                        <p class="card-text text-3"><b>Зеленая волна (2022):</b> {{b.greenWave}}</p>
+                                        <p class="card-text text-4"><b>Проходной балл (бюджетная основа, 2022 г.):</b>
+                                            {{b.passingScore}}</p>
+                                        <div class="div-btn">
+                                            <button type="button" class="btn my-btn btn-lg" data-bs-toggle="modal"
+                                                data-bs-target="#modalId_{{b.id}}">
+                                                Подробнее
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                            {% endfor %}
                         </div>
-                        {% endfor %}
                     </div>
                 </div>
-            </div>
-        </section>
-        <section class="magistracy">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <h2 class="text-center  fw-bolder mb-5  direction_title" style="padding-top: 70px;">
-                            Магистратура
-                        </h2>
+            </section>
+            <section class="magistracy">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2 class="text-center  fw-bolder mb-5  direction_title" style="padding-top: 70px;">
+                                Магистратура
+                            </h2>
+                        </div>
                     </div>
-                </div>
 
-                <div class="row">
-                    <div class="col-12">
-                        <h2 class="text-center  mb-5  speciality_title">09.04.02 Информационные системы и
-                            технологии:
-                        </h2>
+                    <div class="row">
+                        <div class="col-12">
+                            <h2 class="text-center  mb-5  speciality_title">09.04.02 Информационные системы и
+                                технологии:
+                            </h2>
+                        </div>
                     </div>
-                </div>
 
-                <div class="cards ">
-                    <div class="row ">
-                        {% for m in magistr090402 %}
-                        <div class="col-xl-6 col-md-6 col-sm-12 d-flex justify-content-center">
-                            <div class="card my-card">
-                                <div class="card-body">
-                                    <h4 class="card-title">{{m.profile}}</h4>
-                                    <p class="card-text text-1"><b>Форма обучения:</b> {{m.formOfEdu}}</p>
-                                    <p class="card-text text-1"><b>Срок обучения:</b></p>
-                                    <ul class="">
-                                        {% if m.trainingPeriodFT %}
-                                        <li class="my-li">{{m.trainingPeriodFT}}</li>
-                                        {% endif %}
+                    <div class="cards ">
+                        <div class="row ">
+                            {% for m in magistr090402 %}
+                            <div class="col-xl-6 col-md-6 col-sm-12 d-flex justify-content-center">
+                                <div class="card my-card">
+                                    <div class="card-body">
+                                        <h4 class="card-title">{{m.profile}}</h4>
+                                        <p class="card-text text-1"><b>Форма обучения:</b> {{m.formOfEdu}}</p>
+                                        <p class="card-text text-1"><b>Срок обучения:</b></p>
+                                        <ul class="">
+                                            {% if m.trainingPeriodFT %}
+                                            <li class="my-li">{{m.trainingPeriodFT}}</li>
+                                            {% endif %}
 
-                                        {% if m.trainingPeriodPT %}
-                                        <li class="my-li">{{m.trainingPeriodPT}}</li>
-                                        {% endif %}
+                                            {% if m.trainingPeriodPT %}
+                                            <li class="my-li">{{m.trainingPeriodPT}}</li>
+                                            {% endif %}
 
-                                        {% if m.trainingPeriodDL %}
-                                        <li class="my-li">{{m.trainingPeriodDL}}</li>
-                                        {% endif %}
+                                            {% if m.trainingPeriodDL %}
+                                            <li class="my-li">{{m.trainingPeriodDL}}</li>
+                                            {% endif %}
 
-                                    </ul>
-                                    <p class="card-text text-1"><b>Стоимость обучения:</b></p>
-                                    <ul class="">
-                                        {% if m.priceFT %}
-                                        <li class="my-li">{{m.priceFT}}</li>
-                                        {% endif %}
+                                        </ul>
+                                        <p class="card-text text-1"><b>Стоимость обучения:</b></p>
+                                        <ul class="">
+                                            {% if m.priceFT %}
+                                            <li class="my-li">{{m.priceFT}}</li>
+                                            {% endif %}
 
-                                        {% if m.pricePT %}
-                                        <li class="my-li">{{m.pricePT}}</li>
-                                        {% endif %}
+                                            {% if m.pricePT %}
+                                            <li class="my-li">{{m.pricePT}}</li>
+                                            {% endif %}
 
-                                        {% if m.priceDL %}
-                                        <li class="my-li">{{m.priceDL}}</li>
-                                        {% endif %}
-                                    </ul>
+                                            {% if m.priceDL %}
+                                            <li class="my-li">{{m.priceDL}}</li>
+                                            {% endif %}
+                                        </ul>
 
-                                    <div class="div-btn">
-                                        <button type="button" class="btn my-btn btn-lg" data-bs-toggle="modal"
-                                            data-bs-target="#modalId_21">
-                                            Подробнее
-                                        </button>
+                                        <div class="div-btn">
+                                            <button type="button" class="btn my-btn btn-lg" data-bs-toggle="modal"
+                                                data-bs-target="#modalId_21">
+                                                Подробнее
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                            {% endfor %}
                         </div>
-                        {% endfor %}
                     </div>
-                </div>
 
-                <div class="row">
-                    <div class="col-12">
-                        <h2 class="text-center  mb-5  speciality_title">42.04.05 Медиакоммуникации:</h2>
+                    <div class="row">
+                        <div class="col-12">
+                            <h2 class="text-center  mb-5  speciality_title">42.04.05 Медиакоммуникации:</h2>
+                        </div>
                     </div>
-                </div>
 
-                <div class="cards ">
-                    <div class="row ">
-                        {% for m in magistr420405 %}
-                        <div class="col-xl-4 col-md-12 d-flex justify-content-center">
-                            <div class="card my-card">
-                                <div class="card-body">
-                                    <h4 class="card-title">{{m.profile}}</h4>
-                                    <p class="card-text text-1"><b>Форма обучения:</b> {{m.formOfEdu}}</p>
-                                    <p class="card-text text-1"><b>Срок обучения:</b></p>
-                                    <ul class="">
-                                        {% if m.trainingPeriodFT %}
-                                        <li class="my-li">{{m.trainingPeriodFT}}</li>
-                                        {% endif %}
+                    <div class="cards ">
+                        <div class="row ">
+                            {% for m in magistr420405 %}
+                            <div class="col-xl-4 col-md-12 d-flex justify-content-center">
+                                <div class="card my-card">
+                                    <div class="card-body">
+                                        <h4 class="card-title">{{m.profile}}</h4>
+                                        <p class="card-text text-1"><b>Форма обучения:</b> {{m.formOfEdu}}</p>
+                                        <p class="card-text text-1"><b>Срок обучения:</b></p>
+                                        <ul class="">
+                                            {% if m.trainingPeriodFT %}
+                                            <li class="my-li">{{m.trainingPeriodFT}}</li>
+                                            {% endif %}
 
-                                        {% if m.trainingPeriodPT %}
-                                        <li class="my-li">{{m.trainingPeriodPT}}</li>
-                                        {% endif %}
+                                            {% if m.trainingPeriodPT %}
+                                            <li class="my-li">{{m.trainingPeriodPT}}</li>
+                                            {% endif %}
 
-                                        {% if m.trainingPeriodDL %}
-                                        <li class="my-li">{{m.trainingPeriodDL}}</li>
-                                        {% endif %}
+                                            {% if m.trainingPeriodDL %}
+                                            <li class="my-li">{{m.trainingPeriodDL}}</li>
+                                            {% endif %}
 
-                                    </ul>
-                                    <p class="card-text text-1"><b>Стоимость обучения:</b></p>
-                                    <ul class="">
-                                        {% if m.priceFT %}
-                                        <li class="my-li">{{m.priceFT}}</li>
-                                        {% endif %}
+                                        </ul>
+                                        <p class="card-text text-1"><b>Стоимость обучения:</b></p>
+                                        <ul class="">
+                                            {% if m.priceFT %}
+                                            <li class="my-li">{{m.priceFT}}</li>
+                                            {% endif %}
 
-                                        {% if m.pricePT %}
-                                        <li class="my-li">{{m.pricePT}}</li>
-                                        {% endif %}
+                                            {% if m.pricePT %}
+                                            <li class="my-li">{{m.pricePT}}</li>
+                                            {% endif %}
 
-                                        {% if m.priceDL %}
-                                        <li class="my-li">{{m.priceDL}}</li>
-                                        {% endif %}
-                                    </ul>
+                                            {% if m.priceDL %}
+                                            <li class="my-li">{{m.priceDL}}</li>
+                                            {% endif %}
+                                        </ul>
 
-                                    <div class="div-btn">
-                                        <button type="button" class="btn my-btn btn-lg" data-bs-toggle="modal"
-                                            data-bs-target="#modalId_21">
-                                            Подробнее
-                                        </button>
+                                        <div class="div-btn">
+                                            <button type="button" class="btn my-btn btn-lg" data-bs-toggle="modal"
+                                                data-bs-target="#modalId_21">
+                                                Подробнее
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                            {% endfor %}
                         </div>
-                        {% endfor %}
                     </div>
-                </div>
 
-                <div class="row">
-                    <div class="col-12">
-                        <h2 class="text-center  mb-5  speciality_title">42.04.01 Реклама и связи с общественностью:
-                        </h2>
+                    <div class="row">
+                        <div class="col-12">
+                            <h2 class="text-center  mb-5  speciality_title">42.04.01 Реклама и связи с общественностью:
+                            </h2>
+                        </div>
                     </div>
-                </div>
 
-                <div class="cards ">
-                    <div class="row ">
-                        {% for m in magistr420401 %}
-                        <div class="col-xl-4 col-md-12 d-flex justify-content-center">
-                            <div class="card my-card">
-                                <div class="card-body">
-                                    <h4 class="card-title">{{m.profile}}</h4>
-                                    <p class="card-text text-1"><b>Форма обучения:</b> {{m.formOfEdu}}</p>
-                                    <p class="card-text text-1"><b>Срок обучения:</b></p>
-                                    <ul class="">
-                                        {% if m.trainingPeriodFT %}
-                                        <li class="my-li">{{m.trainingPeriodFT}}</li>
-                                        {% endif %}
+                    <div class="cards ">
+                        <div class="row ">
+                            {% for m in magistr420401 %}
+                            <div class="col-xl-4 col-md-12 d-flex justify-content-center">
+                                <div class="card my-card">
+                                    <div class="card-body">
+                                        <h4 class="card-title">{{m.profile}}</h4>
+                                        <p class="card-text text-1"><b>Форма обучения:</b> {{m.formOfEdu}}</p>
+                                        <p class="card-text text-1"><b>Срок обучения:</b></p>
+                                        <ul class="">
+                                            {% if m.trainingPeriodFT %}
+                                            <li class="my-li">{{m.trainingPeriodFT}}</li>
+                                            {% endif %}
 
-                                        {% if m.trainingPeriodPT %}
-                                        <li class="my-li">{{m.trainingPeriodPT}}</li>
-                                        {% endif %}
+                                            {% if m.trainingPeriodPT %}
+                                            <li class="my-li">{{m.trainingPeriodPT}}</li>
+                                            {% endif %}
 
-                                        {% if m.trainingPeriodDL %}
-                                        <li class="my-li">{{m.trainingPeriodDL}}</li>
-                                        {% endif %}
+                                            {% if m.trainingPeriodDL %}
+                                            <li class="my-li">{{m.trainingPeriodDL}}</li>
+                                            {% endif %}
 
-                                    </ul>
-                                    <p class="card-text text-1"><b>Стоимость обучения:</b></p>
-                                    <ul class="">
-                                        {% if m.priceFT %}
-                                        <li class="my-li">{{m.priceFT}}</li>
-                                        {% endif %}
+                                        </ul>
+                                        <p class="card-text text-1"><b>Стоимость обучения:</b></p>
+                                        <ul class="">
+                                            {% if m.priceFT %}
+                                            <li class="my-li">{{m.priceFT}}</li>
+                                            {% endif %}
 
-                                        {% if m.pricePT %}
-                                        <li class="my-li">{{m.pricePT}}</li>
-                                        {% endif %}
+                                            {% if m.pricePT %}
+                                            <li class="my-li">{{m.pricePT}}</li>
+                                            {% endif %}
 
-                                        {% if m.priceDL %}
-                                        <li class="my-li">{{m.priceDL}}</li>
-                                        {% endif %}
-                                    </ul>
+                                            {% if m.priceDL %}
+                                            <li class="my-li">{{m.priceDL}}</li>
+                                            {% endif %}
+                                        </ul>
 
-                                    <div class="div-btn">
-                                        <button type="button" class="btn my-btn btn-lg" data-bs-toggle="modal"
-                                            data-bs-target="#modalId_21">
-                                            Подробнее
-                                        </button>
+                                        <div class="div-btn">
+                                            <button type="button" class="btn my-btn btn-lg" data-bs-toggle="modal"
+                                                data-bs-target="#modalId_21">
+                                                Подробнее
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                            {% endfor %}
                         </div>
-                        {% endfor %}
                     </div>
-                </div>
 
-                <div class="row">
-                    <div class="col-xl-6 col-md-12 ">
-                        <h2 class="text-center  mb-5  speciality_title">51.04.03 Социально-культурная деятельность:
-                        </h2>
-                        {% for m in magistr510403 %}
-                        <div class="col--12 d-flex justify-content-center">
-                            <div class="card my-card">
-                                <div class="card-body">
-                                    <h4 class="card-title">{{m.profile}}</h4>
-                                    <p class="card-text text-1"><b>Форма обучения:</b> {{m.formOfEdu}}</p>
-                                    <p class="card-text text-1"><b>Срок обучения:</b></p>
-                                    <ul class="">
-                                        {% if m.trainingPeriodFT %}
-                                        <li class="my-li">{{m.trainingPeriodFT}}</li>
-                                        {% endif %}
+                    <div class="row">
+                        <div class="col-xl-6 col-md-12 ">
+                            <h2 class="text-center  mb-5  speciality_title">51.04.03 Социально-культурная деятельность:
+                            </h2>
+                            {% for m in magistr510403 %}
+                            <div class="col--12 d-flex justify-content-center">
+                                <div class="card my-card">
+                                    <div class="card-body">
+                                        <h4 class="card-title">{{m.profile}}</h4>
+                                        <p class="card-text text-1"><b>Форма обучения:</b> {{m.formOfEdu}}</p>
+                                        <p class="card-text text-1"><b>Срок обучения:</b></p>
+                                        <ul class="">
+                                            {% if m.trainingPeriodFT %}
+                                            <li class="my-li">{{m.trainingPeriodFT}}</li>
+                                            {% endif %}
 
-                                        {% if m.trainingPeriodPT %}
-                                        <li class="my-li">{{m.trainingPeriodPT}}</li>
-                                        {% endif %}
+                                            {% if m.trainingPeriodPT %}
+                                            <li class="my-li">{{m.trainingPeriodPT}}</li>
+                                            {% endif %}
 
-                                        {% if m.trainingPeriodDL %}
-                                        <li class="my-li">{{m.trainingPeriodDL}}</li>
-                                        {% endif %}
+                                            {% if m.trainingPeriodDL %}
+                                            <li class="my-li">{{m.trainingPeriodDL}}</li>
+                                            {% endif %}
 
-                                    </ul>
-                                    <p class="card-text text-1"><b>Стоимость обучения:</b></p>
-                                    <ul class="">
-                                        {% if m.priceFT %}
-                                        <li class="my-li">{{m.priceFT}}</li>
-                                        {% endif %}
+                                        </ul>
+                                        <p class="card-text text-1"><b>Стоимость обучения:</b></p>
+                                        <ul class="">
+                                            {% if m.priceFT %}
+                                            <li class="my-li">{{m.priceFT}}</li>
+                                            {% endif %}
 
-                                        {% if m.pricePT %}
-                                        <li class="my-li">{{m.pricePT}}</li>
-                                        {% endif %}
+                                            {% if m.pricePT %}
+                                            <li class="my-li">{{m.pricePT}}</li>
+                                            {% endif %}
 
-                                        {% if m.priceDL %}
-                                        <li class="my-li">{{m.priceDL}}</li>
-                                        {% endif %}
-                                    </ul>
+                                            {% if m.priceDL %}
+                                            <li class="my-li">{{m.priceDL}}</li>
+                                            {% endif %}
+                                        </ul>
 
-                                    <div class="div-btn">
-                                        <button type="button" class="btn my-btn btn-lg" data-bs-toggle="modal"
-                                            data-bs-target="#modalId_21">
-                                            Подробнее
-                                        </button>
+                                        <div class="div-btn">
+                                            <button type="button" class="btn my-btn btn-lg" data-bs-toggle="modal"
+                                                data-bs-target="#modalId_21">
+                                                Подробнее
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                            {% endfor %}
                         </div>
-                        {% endfor %}
-                    </div>
 
 
-                    <div class="col-xl-6 col-md-12">
+                        <div class="col-xl-6 col-md-12">
 
-                        <h2 class="text-center  mb-5 speciality_title marg">53.04.02 Вокальное искусство:</h2>
+                            <h2 class="text-center  mb-5 speciality_title marg">53.04.02 Вокальное искусство:</h2>
 
 
-                        {% for m in magistr530402 %}
-                        <div class="col--12 d-flex justify-content-center">
-                            <div class="card my-card">
-                                <div class="card-body">
-                                    <h4 class="card-title">{{m.profile}}</h4>
-                                    <p class="card-text text-1"><b>Форма обучения:</b> {{m.formOfEdu}}</p>
-                                    <p class="card-text text-1"><b>Срок обучения:</b></p>
-                                    <ul class="">
-                                        {% if m.trainingPeriodFT %}
-                                        <li class="my-li">{{m.trainingPeriodFT}}</li>
-                                        {% endif %}
+                            {% for m in magistr530402 %}
+                            <div class="col--12 d-flex justify-content-center">
+                                <div class="card my-card">
+                                    <div class="card-body">
+                                        <h4 class="card-title">{{m.profile}}</h4>
+                                        <p class="card-text text-1"><b>Форма обучения:</b> {{m.formOfEdu}}</p>
+                                        <p class="card-text text-1"><b>Срок обучения:</b></p>
+                                        <ul class="">
+                                            {% if m.trainingPeriodFT %}
+                                            <li class="my-li">{{m.trainingPeriodFT}}</li>
+                                            {% endif %}
 
-                                        {% if m.trainingPeriodPT %}
-                                        <li class="my-li">{{m.trainingPeriodPT}}</li>
-                                        {% endif %}
+                                            {% if m.trainingPeriodPT %}
+                                            <li class="my-li">{{m.trainingPeriodPT}}</li>
+                                            {% endif %}
 
-                                        {% if m.trainingPeriodDL %}
-                                        <li class="my-li">{{m.trainingPeriodDL}}</li>
-                                        {% endif %}
+                                            {% if m.trainingPeriodDL %}
+                                            <li class="my-li">{{m.trainingPeriodDL}}</li>
+                                            {% endif %}
 
-                                    </ul>
-                                    <p class="card-text text-1"><b>Стоимость обучения:</b></p>
-                                    <ul class="">
-                                        {% if m.priceFT %}
-                                        <li class="my-li">{{m.priceFT}}</li>
-                                        {% endif %}
+                                        </ul>
+                                        <p class="card-text text-1"><b>Стоимость обучения:</b></p>
+                                        <ul class="">
+                                            {% if m.priceFT %}
+                                            <li class="my-li">{{m.priceFT}}</li>
+                                            {% endif %}
 
-                                        {% if m.pricePT %}
-                                        <li class="my-li">{{m.pricePT}}</li>
-                                        {% endif %}
+                                            {% if m.pricePT %}
+                                            <li class="my-li">{{m.pricePT}}</li>
+                                            {% endif %}
 
-                                        {% if m.priceDL %}
-                                        <li class="my-li">{{m.priceDL}}</li>
-                                        {% endif %}
-                                    </ul>
+                                            {% if m.priceDL %}
+                                            <li class="my-li">{{m.priceDL}}</li>
+                                            {% endif %}
+                                        </ul>
 
-                                    <div class="div-btn">
-                                        <button type="button" class="btn my-btn btn-lg" data-bs-toggle="modal"
-                                            data-bs-target="#modalId_21">
-                                            Подробнее
-                                        </button>
+                                        <div class="div-btn">
+                                            <button type="button" class="btn my-btn btn-lg" data-bs-toggle="modal"
+                                                data-bs-target="#modalId_21">
+                                                Подробнее
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                            {% endfor %}
                         </div>
-                        {% endfor %}
                     </div>
+
                 </div>
-
-            </div>
-        </section>
-    </div>
-</div>
-
-
-<script>
-    const myModal = new bootstrap.Modal(document.getElementById('modalId'), options)
-</script>
-{% for b in undergraduate %}
-<div class="modal fade" id="{{b.Id}}" tabindex="-1" data-bs-keyboard="false" role="dialog"
-    aria-labelledby="modalTitleId" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg" role="document">
-        <div class="modal-content my-modal">
-            <div class="modal-header my-modal-title">
-                <h5 class="text-center modal-title" id="modalTitleId">{{b.title}}
-                </h5>
-
-            </div>
-            <div class="modal-body">
-                <p><b>Профиль:</b> {{b.profile}}</p>
-                <p><b>Форма обучения:</b> {{b.formOfEdu}}</p>
-
-                <p><b>Что сдавать</b> (по результатам ЕГЭ)?</p>
-                <p>{{b.ege|linebreaks}}</p>
-
-                <p><b>Что сдавать</b> (после СПО)?</p>
-                <p>{{b.spo}}</p>
-
-                <p><b>Бюджетные места:</b> {{b.budgetPlaces}}</p>
-                <p><b>Проходной балл(бюджет, 2023 г.):</b> {{b.passingScore}}</p>
-                <p><b>Стоимость обучения (2023 г.):</b> {{b.priceFT}}</p>
-            </div>
-
+            </section>
         </div>
     </div>
-</div>
-{% endfor %}
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-<script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-<script src="{% static 'mkmt/scripts/scriptFaculty.js' %}"></script>
+
+
+
+    {% for b in undergraduate %}
+    <div class="modal fade" id="modalId_{{b.id}}" tabindex="-1" data-bs-keyboard="false" role="dialog"
+        aria-labelledby="modalTitleId" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content my-modal">
+                <div class="modal-header my-modal-title">
+                    <h5 class="text-center modal-title" id="modalTitleId">{{b.title}}
+                    </h5>
+
+                </div>
+                <div class="modal-body">
+                    <p><b>Профиль:</b> {{b.profile}}</p>
+                    <p><b>Форма обучения:</b> {{b.formOfEdu}}</p>
+
+                    <p><b>Что сдавать</b> (по результатам ЕГЭ)?</p>
+                    <p>{{b.ege|linebreaks}}</p>
+
+                    <p><b>Что сдавать</b> (после СПО)?</p>
+                    <p>{{b.spo}}</p>
+
+                    <p><b>Бюджетные места:</b> {{b.budgetPlaces}}</p>
+                    <p><b>Проходной балл(бюджет, 2023 г.):</b> {{b.passingScore}}</p>
+                    <p><b>Стоимость обучения (2023 г.):</b> {{b.priceFT}}</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+    <script>
+        const myModal = new bootstrap.Modal(document.getElementById('modalId'), options)
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="{% static 'mkmt/scripts/scriptFaculty.js' %}"></script>
+</body>
