@@ -1,6 +1,4 @@
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -10,10 +8,10 @@
     <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="{% static 'mkmt/styles/fontello.css' %}" >
+    <link rel="stylesheet" href="{% static 'mkmt/styles/fontello.css' %}">
     <link rel="stylesheet" href="{% static 'mkmt/styles/styles.css' %}" />
     <link rel="stylesheet" href="{% static 'mkmt/styles/wrapper.css' %}" />
-    <link rel="stylesheet" href="{% static 'mkmt/styles/stylesEducation.css' %}" >
+    <link rel="stylesheet" href="{% static 'mkmt/styles/stylesEducation.css' %}">
     <link rel="stylesheet" href="{% static 'mkmt/styles/header.css' %}" />
     <link rel="stylesheet" href="{% static 'mkmt/styles/burger.css' %}" />
     <link rel="stylesheet" href="{% static 'mkmt/styles/footer.css' %}" />
@@ -50,7 +48,6 @@
             </div>
         </header>
         <div class="main">
-
             <section class="undergraduate">
                 <div class="container">
                     <div class="row">
@@ -61,149 +58,47 @@
                     </div>
                     <div class="cards ">
                         <div class="row">
+                            {% for b in undergraduate %}
                             <div class="d-flex col-xl-4 col-md-6 col-sm-12 justify-content-center">
                                 <div class="card my-card">
                                     <div class="card-body">
-                                        <h4 class="card-title">{{program420301.title}}</h4>
-                                        <p class="card-text text-1"><b>Форма обучения:</b> {{program420301.formOfEdu}}</p>
-                                        <p class="card-text text-2"><b>Бюджетные места (УГНС, 2022):</b> {{program420301.budgetPlaces}}</p>
-                                        <p class="card-text text-3"><b>Зеленая волна (2022):</b> {{program420301.greenWave}}</p>
-                                        <p class="card-text text-4"><b>Проходной балл (бюджетная основа, 2022 г.):</b> {{program420301.passingScore}}</p>
-                                        <div class="div-btn">
-                                            <button type="button" class="btn my-btn btn-lg" data-bs-toggle="modal"
-                                                data-bs-target="#modalId">
-                                                Подробнее
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="d-flex col-xl-4 col-md-6 col-sm-12 justify-content-center">
-                                <div class="card my-card">
-                                    <div class="card-body">
-                                        <h4 class="card-title">42.03.05 «Медиакоммуникации»</h4>
-                                        <p class="card-text text-1"><b>Форма обучения:</b> Очная</p>
-                                        <p class="card-text text-2"><b>Бюджетные места (УГНС, 2022):</b> 6</p>
-                                        <p class="card-text text-3"><b>Зеленая волна (2022):</b> 20</p>
-                                        <p class="card-text text-4"><b>Проходной балл (бюджетная основа, 2022 г.):</b>
-                                            295
+                                        <h4 class="card-title">{{b.title}}</h4>
+                                        <p class="card-text text-1"><b>Форма обучения:</b> {{b.formOfEdu}}</p>
+                                        <p class="card-text text-2"><b>Бюджетные места (УГНС, 2022):</b>
+                                            {{b.budgetPlaces}}
                                         </p>
-                                        <div class="div-btn">
-                                            <button type="button" class="btn my-btn btn-lg" data-bs-toggle="modal"
-                                                data-bs-target="#modalId_1">
-                                                Подробнее
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="d-flex col-xl-4 col-md-6 col-sm-12 justify-content-center">
-                                <div class="card my-card">
-                                    <div class="card-body">
-                                        <h4 class="card-title">09.03.03 «Прикладная информатика»</h4>
-                                        <p class="card-text text-1"><b>Форма обучения:</b> Очная</p>
-                                        <p class="card-text text-2"><b>Бюджетные места (УГНС, 2022):</b> 80</p>
-                                        <p class="card-text text-3"><b>Зеленая волна (2022):</b> 20</p>
+                                        <p class="card-text text-3"><b>Зеленая волна (2022):</b> {{b.greenWave}}</p>
                                         <p class="card-text text-4"><b>Проходной балл (бюджетная основа, 2022 г.):</b>
-                                            210
-                                        </p>
-                                        <div class="div-btn">
-                                            <button type="button" class="btn my-btn btn-lg" data-bs-toggle="modal"
-                                                data-bs-target="#modalId_2">
-                                                Подробнее
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="d-flex col-xl-4 col-md-6 col-sm-12 justify-content-center">
-                                <div class="card my-card">
-                                    <div class="card-body">
-                                        <h4 class="card-title">51.03.01 «Музыкальное искусство эстрады»</h4>
-                                        <p class="card-text text-1"><b>Форма обучения:</b> Очная / Очно-заочная /
-                                            Заочная</p>
-                                        <p class="card-text text-2"><b>Бюджетные места (УГНС, 2022):</b> нет</p>
-                                        <p class="card-text text-2"><b>Стоимость обучения (2023 г.): </b></p>
+                                            {{b.passingScore}}</p>
+                                        <p class="card-text text-1"><b>Стоимость обучения:</b></p>
                                         <ul class="">
-                                            <li class="my-li">215 400 руб (очная)</li>
+                                            {% if b.priceFT %}
+                                            <li class="my-li">{{b.priceFT}}</li>
+                                            {% endif %}
 
-                                            <li class="my-li">75 100 (очно-заочная)</li>
+                                            {% if b.pricePT %}
+                                            <li class="my-li">{{b.pricePT}}</li>
+                                            {% endif %}
 
-                                            <li class="my-li">62 200 руб (заочная)</li>
+                                            {% if b.priceDL %}
+                                            <li class="my-li">{{b.priceDL}}</li>
+                                            {% endif %}
                                         </ul>
-
                                         <div class="div-btn">
                                             <button type="button" class="btn my-btn btn-lg" data-bs-toggle="modal"
-                                                data-bs-target="#modalId_3">
+                                                data-bs-target="#modalId_{{b.id}}">
                                                 Подробнее
                                             </button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="d-flex col-xl-4 col-md-6 col-sm-12 justify-content-center">
-                                <div class="card my-card">
-                                    <div class="card-body">
-                                        <h4 class="card-title">51.03.02«Народная художественная культура»</h4>
-                                        <p class="card-text text-1"><b>Форма обучения:</b> Очная /
-                                            Заочная </p>
-                                        <p class="card-text text-2"><b>Бюджетные места (УГНС, 2022):</b> нет</p>
-                                        <p class="card-text text-2"><b>Стоимость обучения (2023 г.): </b></p>
-                                        <ul class="">
-                                            <li class="my-li">215 400 руб (очная)</li>
-
-                                            <li class="my-li">75 100 (очно-заочная)</li>
-
-                                            <li class="my-li">62 200 руб (заочная)</li>
-                                        </ul>
-
-                                        <div class="div-btn">
-                                            <button type="button" class="btn my-btn btn-lg" data-bs-toggle="modal"
-                                                data-bs-target="#modalId_4">
-                                                Подробнее
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="d-flex col-xl-4 col-md-6 col-sm-12 justify-content-center">
-                                <div class="card my-card">
-                                    <div class="card-body">
-                                        <h4 class="card-title">51.03.03 «Социально-культурная деятельность»</h4>
-                                        <p class="card-text text-1"><b>Форма обучения:</b> Очная /
-                                            Заочная </p>
-                                        <p class="card-text text-2"><b>Бюджетные места (УГНС, 2022):</b> нет</p>
-                                        <p class="card-text text-2"><b>Стоимость обучения (2023 г.): </b></p>
-                                        <ul class="">
-                                            <li class="my-li">120 000 руб (очная)</li>
-
-                                            <li class="my-li">41 400 руб (очно-заочная)</li>
-                                        </ul>
-
-                                        <div class="div-btn">
-                                            <button type="button" class="btn my-btn btn-lg" data-bs-toggle="modal"
-                                                data-bs-target="#modalId_5">
-                                                Подробнее
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            {% endfor %}
                         </div>
-
-
-
-
-
                     </div>
+                </div>
             </section>
-
-            <section class="magistracy one">
+            <section class="magistracy">
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
@@ -212,6 +107,7 @@
                             </h2>
                         </div>
                     </div>
+
                     <div class="row">
                         <div class="col-12">
                             <h2 class="text-center  mb-5  speciality_title">09.04.02 Информационные системы и
@@ -219,171 +115,115 @@
                             </h2>
                         </div>
                     </div>
+
                     <div class="cards ">
                         <div class="row ">
+                            {% for m in magistr090402 %}
                             <div class="col-xl-6 col-md-6 col-sm-12 d-flex justify-content-center">
                                 <div class="card my-card">
                                     <div class="card-body">
-                                        <h4 class="card-title">Профиль: «Медиапроизводство
-                                            и управление контентом»</h4>
-                                        <p class="card-text text-1"><b>Форма обучения:</b> Очная/
-                                            Заочная</p>
+                                        <h4 class="card-title">{{m.profile}}</h4>
+                                        <p class="card-text text-1"><b>Форма обучения:</b> {{m.formOfEdu}}</p>
                                         <p class="card-text text-1"><b>Срок обучения:</b></p>
                                         <ul class="">
-                                            <li class="my-li">2 года (очная форма)</li>
+                                            {% if m.trainingPeriodFT %}
+                                            <li class="my-li">{{m.trainingPeriodFT}}</li>
+                                            {% endif %}
 
-                                            <li class="my-li">2,5 года (заочная) </li>
+                                            {% if m.trainingPeriodPT %}
+                                            <li class="my-li">{{m.trainingPeriodPT}}</li>
+                                            {% endif %}
+
+                                            {% if m.trainingPeriodDL %}
+                                            <li class="my-li">{{m.trainingPeriodDL}}</li>
+                                            {% endif %}
+
                                         </ul>
                                         <p class="card-text text-1"><b>Стоимость обучения:</b></p>
                                         <ul class="">
-                                            <li class="my-li">139600 рублей в год (очное)</li>
+                                            {% if m.priceFT %}
+                                            <li class="my-li">{{m.priceFT}}</li>
+                                            {% endif %}
 
-                                            <li class="my-li">36100 рублей в год (заочное)</li>
+                                            {% if m.pricePT %}
+                                            <li class="my-li">{{m.pricePT}}</li>
+                                            {% endif %}
+
+                                            {% if m.priceDL %}
+                                            <li class="my-li">{{m.priceDL}}</li>
+                                            {% endif %}
                                         </ul>
-
 
                                         <div class="div-btn">
                                             <button type="button" class="btn my-btn btn-lg" data-bs-toggle="modal"
-                                                data-bs-target="#modalId_21">
+                                                data-bs-target="#modalId_{{m.id}}">
                                                 Подробнее
                                             </button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
-
-                            <div class="col-xl-6 col-md-6 col-sm-12 d-flex justify-content-center">
-                                <div class="card my-card">
-                                    <div class="card-body">
-                                        <h4 class="card-title">Профиль: «Интеллектуальные медиатехнологии»</h4>
-                                        <p class="card-text text-1"><b>Форма обучения:</b> Очная/
-                                            Заочная</p>
-                                        <p class="card-text text-1"><b>Срок обучения:</b></p>
-                                        <ul class="">
-                                            <li class="my-li">2 года (очная форма)</li>
-
-                                            <li class="my-li">2 года 4 мес. (заочная) </li>
-                                        </ul>
-                                        <p class="card-text text-1"><b>Стоимость обучения:</b></p>
-                                        <ul class="">
-                                            <li class="my-li">139600 рублей в год (очное)</li>
-
-                                            <li class="my-li">36100 рублей в год (заочное)</li>
-                                        </ul>
-                                        <div class="div-btn">
-                                            <button type="button" class="btn my-btn btn-lg" data-bs-toggle="modal"
-                                                data-bs-target="#modalId_22">
-                                                Подробнее
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            {% endfor %}
                         </div>
                     </div>
-            </section>
 
-            <section class="magistracy two">
-                <div class="container">
                     <div class="row">
                         <div class="col-12">
                             <h2 class="text-center  mb-5  speciality_title">42.04.05 Медиакоммуникации:</h2>
                         </div>
                     </div>
 
-                    <div class="row">
-                        <div class="col-xl-4 col-md-12 d-flex justify-content-center">
-                            <div class="card my-card">
-                                <div class="card-body">
-                                    <h4 class="card-title">Профиль: «Продюсирование мультимедийных проектов»</h4>
-                                    <p class="card-text text-1"><b>Форма обучения:</b> Очная/
-                                        Заочная</p>
-                                    <p class="card-text text-1"><b>Срок обучения:</b></p>
-                                    <ul class="">
-                                        <li class="my-li">2 года (очная форма)</li>
+                    <div class="cards ">
+                        <div class="row ">
+                            {% for m in magistr420405 %}
+                            <div class="col-xl-4 col-md-12 d-flex justify-content-center">
+                                <div class="card my-card">
+                                    <div class="card-body">
+                                        <h4 class="card-title">{{m.profile}}</h4>
+                                        <p class="card-text text-1"><b>Форма обучения:</b> {{m.formOfEdu}}</p>
+                                        <p class="card-text text-1"><b>Срок обучения:</b></p>
+                                        <ul class="">
+                                            {% if m.trainingPeriodFT %}
+                                            <li class="my-li">{{m.trainingPeriodFT}}</li>
+                                            {% endif %}
 
-                                    </ul>
-                                    <p class="card-text text-1"><b>Стоимость обучения:</b></p>
-                                    <ul class="">
-                                        <li class="my-li">124800 рублей в год (очное)</li>
+                                            {% if m.trainingPeriodPT %}
+                                            <li class="my-li">{{m.trainingPeriodPT}}</li>
+                                            {% endif %}
 
+                                            {% if m.trainingPeriodDL %}
+                                            <li class="my-li">{{m.trainingPeriodDL}}</li>
+                                            {% endif %}
 
-                                    </ul>
-                                    <div class="div-btn">
-                                        <button type="button" class="btn my-btn btn-lg" data-bs-toggle="modal"
-                                            data-bs-target="#modalId_31">
-                                            Подробнее
-                                        </button>
+                                        </ul>
+                                        <p class="card-text text-1"><b>Стоимость обучения:</b></p>
+                                        <ul class="">
+                                            {% if m.priceFT %}
+                                            <li class="my-li">{{m.priceFT}}</li>
+                                            {% endif %}
+
+                                            {% if m.pricePT %}
+                                            <li class="my-li">{{m.pricePT}}</li>
+                                            {% endif %}
+
+                                            {% if m.priceDL %}
+                                            <li class="my-li">{{m.priceDL}}</li>
+                                            {% endif %}
+                                        </ul>
+
+                                        <div class="div-btn">
+                                            <button type="button" class="btn my-btn btn-lg" data-bs-toggle="modal"
+                                                data-bs-target="#modalId_{{m.id}}">
+                                                Подробнее
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                            {% endfor %}
                         </div>
-
-                        <div class="col-xl-4 col-md-6 col-sm-12 d-flex justify-content-center">
-                            <div class="card my-card">
-                                <div class="card-body">
-                                    <h4 class="card-title">Профиль: «Медиаобразование»</h4>
-                                    <p class="card-text text-1"><b>Форма обучения:</b> Очная/
-                                        Заочная</p>
-                                    <p class="card-text text-1"><b>Срок обучения:</b></p>
-                                    <ul class="">
-                                        <li class="my-li">2 года (очная форма)</li>
-
-                                        <li class="my-li">2 года 3 мес. (заочная) </li>
-                                    </ul>
-                                    <p class="card-text text-1"><b>Стоимость обучения:</b></p>
-                                    <ul class="">
-                                        <li class="my-li">135200 рублей в год (очное)</li>
-
-                                        <li class="my-li">52000 рублей в год (заочное)</li>
-                                    </ul>
-                                    <div class="div-btn">
-                                        <button type="button" class="btn my-btn btn-lg" data-bs-toggle="modal"
-                                            data-bs-target="#modalId_32">
-                                            Подробнее
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-xl-4 col-md-6 col-sm-12 d-flex justify-content-center">
-                            <div class="card my-card">
-                                <div class="card-body">
-                                    <h4 class="card-title">Профиль: «Новые медиа
-                                        и бизнес-коммуникации»</h4>
-                                    <p class="card-text text-1"><b>Форма обучения:</b> Очная/
-                                        Заочная</p>
-                                    <p class="card-text text-1"><b>Срок обучения:</b></p>
-                                    <ul class="">
-                                        <li class="my-li">2 года (очная форма)</li>
-
-                                        <li class="my-li">2 года 4 мес. (заочная) </li>
-                                    </ul>
-                                    <p class="card-text text-1"><b>Стоимость обучения:</b></p>
-                                    <ul class="">
-                                        <li class="my-li">135200 рублей в год (очное)</li>
-
-                                        <li class="my-li">52000 рублей в год (заочное)</li>
-                                    </ul>
-                                    <div class="div-btn">
-                                        <button type="button" class="btn my-btn btn-lg" data-bs-toggle="modal"
-                                            data-bs-target="#modalId_33">
-                                            Подробнее
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
                     </div>
-                </div>
 
-            </section>
-
-            <section class="magistracy three">
-                <div class="container">
                     <div class="row">
                         <div class="col-12">
                             <h2 class="text-center  mb-5  speciality_title">42.04.01 Реклама и связи с общественностью:
@@ -391,134 +231,107 @@
                         </div>
                     </div>
 
-                    <div class="row">
-                        <div class="col-xl-4 col-md-12 d-flex justify-content-center">
-                            <div class="card my-card">
-                                <div class="card-body">
-                                    <h4 class="card-title_2">Профиль: «Рекламно-коммуникационная деятельность в сфере
-                                        бизнеса»</h4>
-                                    <p class="card-text text-1"><b>Форма обучения:</b> Очная/
-                                        Заочная</p>
-                                    <p class="card-text text-1"><b>Срок обучения:</b></p>
-                                    <ul class="">
-                                        <li class="my-li">2 года (очная форма)</li>
-
-                                        <li class="my-li">2 года 6 мес. (заочная) </li>
-                                    </ul>
-                                    <p class="card-text text-1"><b>Стоимость обучения:</b></p>
-                                    <ul class="">
-                                        <li class="my-li">124800 рублей в год (очное)</li>
-
-                                        <li class="my-li">43100 рублей в год (заочное)</li>
-                                    </ul>
-                                    <div class="div-btn">
-                                        <button type="button" class="btn my-btn btn-lg" data-bs-toggle="modal"
-                                            data-bs-target="#modalId_41">
-                                            Подробнее
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-xl-4 col-md-6 col-sm-12 d-flex justify-content-center">
-                            <div class="card my-card">
-                                <div class="card-body">
-                                    <h4 class="card-title_2" style="hyphens: manual;">Профиль: «Связи с общественностью
-                                        в
-                                        органах госуда-рственного
-                                        и муни-ципального управления»</h4>
-                                    <p class="card-text text-1"><b>Форма обучения:</b> Очная/
-                                        Заочная</p>
-                                    <p class="card-text text-1"><b>Срок обучения:</b></p>
-                                    <ul class="">
-                                        <li class="my-li_2">2 года (очная форма)</li>
-
-                                        <li class="my-li_2">2 года 4 мес. (очно/заочная, заочная) </li>
-                                    </ul>
-                                    <p class="card-text text-1"><b>Стоимость обучения:</b></p>
-                                    <ul class="">
-                                        <li class="my-li_2">124800 рублей в год (очное)</li>
-
-                                        <li class="my-li_2">62400 рублей в год (очно-заочное)</li>
-
-                                        <li class="my-li_2">43100 рублей в год (заочное)</li>
-                                    </ul>
-                                    <div class="div-btn">
-                                        <button type="button" class="btn my-btn btn-lg" data-bs-toggle="modal"
-                                            data-bs-target="#modalId_42">
-                                            Подробнее
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-xl-4 col-md-6 col-sm-12 d-flex justify-content-center">
-                            <div class="card my-card">
-                                <div class="card-body">
-                                    <h4 class="card-title">Профиль: «Корпоративные бренд-коммуникации»</h4>
-                                    <p class="card-text text-1"><b>Форма обучения:</b> Очная/
-                                        Заочная</p>
-                                    <p class="card-text text-1"><b>Срок обучения:</b></p>
-                                    <ul class="">
-                                        <li class="my-li">2 года (очная форма)</li>
-
-                                        <li class="my-li">2 года 4 мес. (очно/заочная, заочная) </li>
-                                    </ul>
-                                    <p class="card-text text-1"><b>Стоимость обучения:</b></p>
-                                    <ul class="">
-                                        <li class="my-li">124800 рублей в год (очное)</li>
-
-                                        <li class="my-li">62400 рублей в год (очно-заочное)</li>
-
-                                        <li class="my-li">43100 рублей в год (заочное)</li>
-                                    </ul>
-                                    <div class="div-btn">
-                                        <button type="button" class="btn my-btn btn-lg" data-bs-toggle="modal"
-                                            data-bs-target="#modalId_43">
-                                            Подробнее
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-            </section>
-
-
-            <section class="magistracy four">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-6 col-md-12 ">
-                            <h2 class="text-center  mb-5  speciality_title">51.04.03 Социально-культурная деятельность:
-                            </h2>
-                            <div class="col--12 d-flex justify-content-center">
+                    <div class="cards ">
+                        <div class="row ">
+                            {% for m in magistr420401 %}
+                            <div class="col-xl-4 col-md-12 d-flex justify-content-center">
                                 <div class="card my-card">
                                     <div class="card-body">
-                                        <h4 class="card-title">Профиль: «Менеджмент креативных индустрий»</h4>
-                                        <p class="card-text text-1"><b>Форма обучения:</b> Очно-заочная</p>
+                                        <h4 class="card-title">{{m.profile}}</h4>
+                                        <p class="card-text text-1"><b>Форма обучения:</b> {{m.formOfEdu}}</p>
                                         <p class="card-text text-1"><b>Срок обучения:</b></p>
                                         <ul class="">
-                                            <li class="my-li">2 года 3 мес.</li>
+                                            {% if m.trainingPeriodFT %}
+                                            <li class="my-li">{{m.trainingPeriodFT}}</li>
+                                            {% endif %}
+
+                                            {% if m.trainingPeriodPT %}
+                                            <li class="my-li">{{m.trainingPeriodPT}}</li>
+                                            {% endif %}
+
+                                            {% if m.trainingPeriodDL %}
+                                            <li class="my-li">{{m.trainingPeriodDL}}</li>
+                                            {% endif %}
 
                                         </ul>
                                         <p class="card-text text-1"><b>Стоимость обучения:</b></p>
                                         <ul class="">
-                                            <li class="my-li">46700 рублей в год</li>
+                                            {% if m.priceFT %}
+                                            <li class="my-li">{{m.priceFT}}</li>
+                                            {% endif %}
+
+                                            {% if m.pricePT %}
+                                            <li class="my-li">{{m.pricePT}}</li>
+                                            {% endif %}
+
+                                            {% if m.priceDL %}
+                                            <li class="my-li">{{m.priceDL}}</li>
+                                            {% endif %}
                                         </ul>
+
                                         <div class="div-btn">
                                             <button type="button" class="btn my-btn btn-lg" data-bs-toggle="modal"
-                                                data-bs-target="#modalId_51">
+                                                data-bs-target="#modalId_{{m.id}}">
                                                 Подробнее
                                             </button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xl-6 col-md-12 ">
+                            <h2 class="text-center  mb-5  speciality_title">51.04.03 Социально-культурная деятельность:
+                            </h2>
+                            {% for m in magistr510403 %}
+                            <div class="col--12 d-flex justify-content-center">
+                                <div class="card my-card">
+                                    <div class="card-body">
+                                        <h4 class="card-title">{{m.profile}}</h4>
+                                        <p class="card-text text-1"><b>Форма обучения:</b> {{m.formOfEdu}}</p>
+                                        <p class="card-text text-1"><b>Срок обучения:</b></p>
+                                        <ul class="">
+                                            {% if m.trainingPeriodFT %}
+                                            <li class="my-li">{{m.trainingPeriodFT}}</li>
+                                            {% endif %}
+
+                                            {% if m.trainingPeriodPT %}
+                                            <li class="my-li">{{m.trainingPeriodPT}}</li>
+                                            {% endif %}
+
+                                            {% if m.trainingPeriodDL %}
+                                            <li class="my-li">{{m.trainingPeriodDL}}</li>
+                                            {% endif %}
+
+                                        </ul>
+                                        <p class="card-text text-1"><b>Стоимость обучения:</b></p>
+                                        <ul class="">
+                                            {% if m.priceFT %}
+                                            <li class="my-li">{{m.priceFT}}</li>
+                                            {% endif %}
+
+                                            {% if m.pricePT %}
+                                            <li class="my-li">{{m.pricePT}}</li>
+                                            {% endif %}
+
+                                            {% if m.priceDL %}
+                                            <li class="my-li">{{m.priceDL}}</li>
+                                            {% endif %}
+                                        </ul>
+
+                                        <div class="div-btn">
+                                            <button type="button" class="btn my-btn btn-lg" data-bs-toggle="modal"
+                                                data-bs-target="#modalId_{{m.id}}">
+                                                Подробнее
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
                         </div>
 
 
@@ -527,578 +340,148 @@
                             <h2 class="text-center  mb-5 speciality_title marg">53.04.02 Вокальное искусство:</h2>
 
 
-
+                            {% for m in magistr530402 %}
                             <div class="col--12 d-flex justify-content-center">
                                 <div class="card my-card">
                                     <div class="card-body">
-                                        <h4 class="card-title">Профиль: «Менеджмент креативных индустрий»</h4>
-                                        <p class="card-text text-1"><b>Форма обучения:</b> Очно-заочная</p>
+                                        <h4 class="card-title">{{m.profile}}</h4>
+                                        <p class="card-text text-1"><b>Форма обучения:</b> {{m.formOfEdu}}</p>
                                         <p class="card-text text-1"><b>Срок обучения:</b></p>
                                         <ul class="">
-                                            <li class="my-li">2 года 3 мес.</li>
+                                            {% if m.trainingPeriodFT %}
+                                            <li class="my-li">{{m.trainingPeriodFT}}</li>
+                                            {% endif %}
+
+                                            {% if m.trainingPeriodPT %}
+                                            <li class="my-li">{{m.trainingPeriodPT}}</li>
+                                            {% endif %}
+
+                                            {% if m.trainingPeriodDL %}
+                                            <li class="my-li">{{m.trainingPeriodDL}}</li>
+                                            {% endif %}
 
                                         </ul>
                                         <p class="card-text text-1"><b>Стоимость обучения:</b></p>
                                         <ul class="">
-                                            <li class="my-li">46700 рублей в год</li>
+                                            {% if m.priceFT %}
+                                            <li class="my-li">{{m.priceFT}}</li>
+                                            {% endif %}
+
+                                            {% if m.pricePT %}
+                                            <li class="my-li">{{m.pricePT}}</li>
+                                            {% endif %}
+
+                                            {% if m.priceDL %}
+                                            <li class="my-li">{{m.priceDL}}</li>
+                                            {% endif %}
                                         </ul>
+
                                         <div class="div-btn">
                                             <button type="button" class="btn my-btn btn-lg" data-bs-toggle="modal"
-                                                data-bs-target="#modalId_52">
+                                                data-bs-target="#modalId_{{m.id}}">
                                                 Подробнее
                                             </button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            {% endfor %}
                         </div>
                     </div>
 
-
                 </div>
             </section>
-
-
-
+            <footer class="footer">
+                <div class="footer_main">
+                    <a href="{% url 'index' %}"><h3 class="footer_header">Главное</h3></a>
+                    <ul class="footer_main_sub">
+                        <li><a>Кафедры</a></li>
+                        <li><a>Лица факультета</a></li>
+                        <li><a>Партнеры</a></li>
+                    </ul>
+                </div>
+                <div class="footer_faculty">
+                    <a href="{% url 'faculty' %}"><h3 class="footer_header">О факультете</h3></a>
+                    <ul class="footer_faculty_sub">
+                        <li><a>Сферы обучения</a></li>
+                        <li><a>Техническое оснащение</a></li>
+                    </ul>
+                </div>
+                <div class="footer_education">
+                    <a href="{% url 'education' %}"><h3 class="footer_header">Образование</h3></a>
+                    <ul class="footer_education_sub">
+                        <li><a>Бакалавриат</a></li>
+                        <li><a>Магистратура</a></li>
+                    </ul>
+                </div>
+                <div class="footer_portfolio">
+                    <h3 class="footer_header">Портфолио</h3>
+                    <ul class="footer_portfolio_sub">
+                        <li><a>3D</a></li>
+                        <li><a>Анимация</a></li>
+                        <li><a>Аудио</a></li>
+                        <li class="footer_sub_more">Еще <img src="{% static 'mkmt/styles/images/more_button.svg' %}" />
+                            <ul class="sub_more_more">
+                                <li><a>ABC</a></li>
+                                <li><a>DEF</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer_contacts">
+                    <a href="{% url 'contacts' %}"><h3 class="footer_header">Контакты</h3></a>
+                    <ul class="footer_contacts_sub">
+                        <li><a>Факультет МКиМТ</a></li>
+                        <li><a>Декан факультета</a></li>
+                        <li><a>Деканат</a></li>
+                        <li class="footer_sub_more">Еще <img src="{% static 'mkmt/styles/images/more_button.svg' %}" />
+                            <ul class="sub_more_more">
+                                <li><a>ABC</a></li>
+                                <li><a>DEF</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </footer>
         </div>
-
-        <footer class="footer">
-            <div class="footer_main">
-                <a href="{% url 'index' %}"><h3 class="footer_header">Главное</h3></a>
-                <ul class="footer_main_sub">
-                    <li><a>Кафедры</a></li>
-                    <li><a>Лица факультета</a></li>
-                    <li><a>Партнеры</a></li>
-                </ul>
-            </div>
-            <div class="footer_faculty">
-                <a href="{% url 'faculty' %}"><h3 class="footer_header">О факультете</h3></a>
-                <ul class="footer_faculty_sub">
-                    <li><a>Сферы обучения</a></li>
-                    <li><a>Техническое оснащение</a></li>
-                </ul>
-            </div>
-            <div class="footer_education">
-                <a href="{% url 'education' %}"><h3 class="footer_header">Образование</h3></a>
-                <ul class="footer_education_sub">
-                    <li><a>Бакалавриат</a></li>
-                    <li><a>Магистратура</a></li>
-                </ul>
-            </div>
-            <div class="footer_portfolio">
-                <h3 class="footer_header">Портфолио</h3>
-                <ul class="footer_portfolio_sub">
-                    <li><a>3D</a></li>
-                    <li><a>Анимация</a></li>
-                    <li><a>Аудио</a></li>
-                    <li class="footer_sub_more">Еще <img src="{% static 'mkmt/styles/images/more_button.svg' %}" />
-                        <ul class="sub_more_more">
-                            <li><a>ABC</a></li>
-                            <li><a>DEF</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-            <div class="footer_contacts">
-                <a href="{% url 'contacts' %}"><h3 class="footer_header">Контакты</h3></a>
-                <ul class="footer_contacts_sub">
-                    <li><a>Факультет МКиМТ</a></li>
-                    <li><a>Декан факультета</a></li>
-                    <li><a>Деканат</a></li>
-                    <li class="footer_sub_more">Еще <img src="{% static 'mkmt/styles/images/more_button.svg' %}" />
-                        <ul class="sub_more_more">
-                            <li><a>ABC</a></li>
-                            <li><a>DEF</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </footer>
-
-
     </div>
 
-
-
-    <div class="modal fade" id="modalId" tabindex="-1" data-bs-keyboard="false" role="dialog"
+    {% for b in undergraduate %}
+    <div class="modal fade" id="modalId_{{b.id}}" tabindex="-1" data-bs-keyboard="false" role="dialog"
         aria-labelledby="modalTitleId" aria-hidden="true">
         <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg" role="document">
             <div class="modal-content my-modal">
                 <div class="modal-header my-modal-title">
-                    <h5 class="text-center modal-title" id="modalTitleId">{{program420301.title}}
+                    <h5 class="text-center modal-title_e" id="modalTitleId">{{b.title}}
                     </h5>
 
                 </div>
                 <div class="modal-body">
-                    <p><b>Профиль:</b> {{program420301.profile}}</p>
-                    <p><b>Форма обучения:</b> {{program420301.formOfEdu}}</p>
+                    <p><b>Профиль:</b> {{b.profile}}</p>
+                    <p><b>Форма обучения:</b> {{b.formOfEdu}}</p>
 
                     <p><b>Что сдавать</b> (по результатам ЕГЭ)?</p>
-                    <p>{{program420301.ege|linebreaks}}</p>
+                    <p>{{b.ege|linebreaks}}</p>
 
                     <p><b>Что сдавать</b> (после СПО)?</p>
-                    <p>{{program420301.spo}}</p>
+                    <p>{{b.spo}}</p>
 
-                    <p><b>Бюджетные места:</b> {{program420301.budgetPlaces}}</p>
-                    <p><b>Проходной балл(бюджет, 2023 г.):</b> {{program420301.passingScore}}</p>
-                    <p><b>Стоимость обучения (2023 г.):</b> {{program420301.priceFT}}</p>
+                    <p><b>Бюджетные места:</b> {{b.budgetPlaces}}</p>
+                    <p><b>Проходной балл(бюджет, 2023 г.):</b> {{b.passingScore}}</p>
+                    <p><b>Стоимость обучения (2023 г.):</b> {{b.priceFT}}
+                                                            {{b.pricePT}}
+                                                            {{b.priceDL}}</p>
                 </div>
 
             </div>
         </div>
     </div>
-
-    <div class="modal fade" id="modalId_1" tabindex="-1" data-bs-keyboard="false" role="dialog"
-        aria-labelledby="modalTitleId" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg" role="document">
-            <div class="modal-content my-modal">
-                <div class="modal-header my-modal-title text-center">
-                    <h5 class=" modal-title" id="modalTitleId">42.03.05 «Медиакоммуникации»</h5>
-
-                </div>
-                <div class="modal-body">
-                    <p><b>Профиль:</b> Разработка игр и прикладных программ</p>
-                    <p><b>Форма обучения:</b></p>
-
-                    <p><b>Что сдавать</b> (по результатам ЕГЭ)?</p>
-                    <p>Обязательные: русский язык, профильная математика</p>
-                    <p>По выбору: информатика / физика / химия</p>
-
-                    <p><b>Что сдавать</b> (после СПО)?</p>
-                    <p>Обязательные: русский язык, профильная математика, информационные технологии</p>
-
-                    <p><b>Бюджетные места:</b> 80</p>
-                    <p><b>Проходной балл(бюджет, 2023 г.):</b> 210</p>
-                    <p><b>Стоимость обучения (2023 г.):</b>125 900 руб</p>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="modalId_2" tabindex="-1" data-bs-keyboard="false" role="dialog"
-        aria-labelledby="modalTitleId" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg" role="document">
-            <div class="modal-content my-modal">
-                <div class="modal-header my-modal-title">
-                    <h5 class="text-center modal-title" id="modalTitleId">09.03.03 «Прикладная информатика»</h5>
-
-                </div>
-                <div class="modal-body">
-                    <p><b>Профиль:</b> Разработка игр и прикладных программ</p>
-                    <p><b>Форма обучения:</b></p>
-
-                    <p><b>Что сдавать</b> (по результатам ЕГЭ)?</p>
-                    <p>Обязательные: русский язык, профильная математика</p>
-                    <p>По выбору: информатика / физика / химия</p>
-
-                    <p><b>Что сдавать</b> (после СПО)?</p>
-                    <p>Обязательные: русский язык, профильная математика, информационные технологии</p>
-
-                    <p><b>Бюджетные места:</b> 80</p>
-                    <p><b>Проходной балл(бюджет, 2023 г.):</b> 210</p>
-                    <p><b>Стоимость обучения (2023 г.):</b>125 900 руб</p>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="modalId_3" tabindex="-1" data-bs-keyboard="false" role="dialog"
-        aria-labelledby="modalTitleId" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg" role="document">
-            <div class="modal-content my-modal">
-                <div class="modal-header my-modal-title">
-                    <h5 class="text-center modal-title" id="modalTitleId">51.03.01 «Музыкальное искусство эстрады»</h5>
-
-                </div>
-                <div class="modal-body">
-                    <p><b>Профиль:</b> Разработка игр и прикладных программ</p>
-                    <p><b>Форма обучения:</b></p>
-
-                    <p><b>Что сдавать</b> (по результатам ЕГЭ)?</p>
-                    <p>Обязательные: русский язык, профильная математика</p>
-                    <p>По выбору: информатика / физика / химия</p>
-
-                    <p><b>Что сдавать</b> (после СПО)?</p>
-                    <p>Обязательные: русский язык, профильная математика, информационные технологии</p>
-
-                    <p><b>Бюджетные места:</b> 80</p>
-                    <p><b>Проходной балл(бюджет, 2023 г.):</b> 210</p>
-                    <p><b>Стоимость обучения (2023 г.):</b>125 900 руб</p>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="modalId_4" tabindex="-1" data-bs-keyboard="false" role="dialog"
-        aria-labelledby="modalTitleId" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg" role="document">
-            <div class="modal-content my-modal">
-                <div class="modal-header my-modal-title">
-                    <h5 class="text-center modal-title" id="modalTitleId">51.03.02«Народная художественная культура»
-                    </h5>
-
-                </div>
-                <div class="modal-body">
-                    <p><b>Профиль:</b> Разработка игр и прикладных программ</p>
-                    <p><b>Форма обучения:</b></p>
-
-                    <p><b>Что сдавать</b> (по результатам ЕГЭ)?</p>
-                    <p>Обязательные: русский язык, профильная математика</p>
-                    <p>По выбору: информатика / физика / химия</p>
-
-                    <p><b>Что сдавать</b> (после СПО)?</p>
-                    <p>Обязательные: русский язык, профильная математика, информационные технологии</p>
-
-                    <p><b>Бюджетные места:</b> 80</p>
-                    <p><b>Проходной балл(бюджет, 2023 г.):</b> 210</p>
-                    <p><b>Стоимость обучения (2023 г.):</b>125 900 руб</p>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="modalId_5" tabindex="-1" data-bs-keyboard="false" role="dialog"
-        aria-labelledby="modalTitleId" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg" role="document">
-            <div class="modal-content my-modal">
-                <div class="modal-header my-modal-title">
-                    <h5 class="text-center modal-title" id="modalTitleId">51.03.03 «Социально-культурная деятельность»
-                    </h5>
-
-                </div>
-                <div class="modal-body">
-                    <p><b>Профиль:</b> Разработка игр и прикладных программ</p>
-                    <p><b>Форма обучения:</b></p>
-
-                    <p><b>Что сдавать</b> (по результатам ЕГЭ)?</p>
-                    <p>Обязательные: русский язык, профильная математика</p>
-                    <p>По выбору: информатика / физика / химия</p>
-
-                    <p><b>Что сдавать</b> (после СПО)?</p>
-                    <p>Обязательные: русский язык, профильная математика, информационные технологии</p>
-
-                    <p><b>Бюджетные места:</b> 80</p>
-                    <p><b>Проходной балл(бюджет, 2023 г.):</b> 210</p>
-                    <p><b>Стоимость обучения (2023 г.):</b>125 900 руб</p>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-
-
-    <div class="modal fade" id="modalId_21" tabindex="-1" data-bs-keyboard="false" role="dialog"
-        aria-labelledby="modalTitleId" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg" role="document">
-            <div class="modal-content my-modal">
-                <div class="modal-header my-modal-title">
-                    <h5 class="text-center modal-title" id="modalTitleId">Профиль: «Медиапроизводство и управление
-                        контентом»
-                    </h5>
-
-                </div>
-                <div class="modal-body">
-                    <p><b>Профиль:</b> Разработка игр и прикладных программ</p>
-                    <p><b>Форма обучения:</b></p>
-
-                    <p><b>Что сдавать</b> (по результатам ЕГЭ)?</p>
-                    <p>Обязательные: русский язык, профильная математика</p>
-                    <p>По выбору: информатика / физика / химия</p>
-
-                    <p><b>Что сдавать</b> (после СПО)?</p>
-                    <p>Обязательные: русский язык, профильная математика, информационные технологии</p>
-
-                    <p><b>Бюджетные места:</b> 80</p>
-                    <p><b>Проходной балл(бюджет, 2023 г.):</b> 210</p>
-                    <p><b>Стоимость обучения (2023 г.):</b>125 900 руб</p>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="modalId_22" tabindex="-1" data-bs-keyboard="false" role="dialog"
-        aria-labelledby="modalTitleId" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg" role="document">
-            <div class="modal-content my-modal">
-                <div class="modal-header my-modal-title">
-                    <h5 class="text-center modal-title" id="modalTitleId">Профиль: «Интеллектуальные медиатехнологии»
-                    </h5>
-
-                </div>
-                <div class="modal-body">
-                    <p><b>Профиль:</b> Разработка игр и прикладных программ</p>
-                    <p><b>Форма обучения:</b></p>
-
-                    <p><b>Что сдавать</b> (по результатам ЕГЭ)?</p>
-                    <p>Обязательные: русский язык, профильная математика</p>
-                    <p>По выбору: информатика / физика / химия</p>
-
-                    <p><b>Что сдавать</b> (после СПО)?</p>
-                    <p>Обязательные: русский язык, профильная математика, информационные технологии</p>
-
-                    <p><b>Бюджетные места:</b> 80</p>
-                    <p><b>Проходной балл(бюджет, 2023 г.):</b> 210</p>
-                    <p><b>Стоимость обучения (2023 г.):</b>125 900 руб</p>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-
-
-
-    <div class="modal fade" id="modalId_31" tabindex="-1" data-bs-keyboard="false" role="dialog"
-        aria-labelledby="modalTitleId" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg" role="document">
-            <div class="modal-content my-modal">
-                <div class="modal-header my-modal-title">
-                    <h5 class="text-center modal-title" id="modalTitleId">Профиль: «Продюсирование мультимедийных
-                        проектов»
-                    </h5>
-
-                </div>
-                <div class="modal-body">
-                    <p><b>Профиль:</b> Разработка игр и прикладных программ</p>
-                    <p><b>Форма обучения:</b></p>
-
-                    <p><b>Что сдавать</b> (по результатам ЕГЭ)?</p>
-                    <p>Обязательные: русский язык, профильная математика</p>
-                    <p>По выбору: информатика / физика / химия</p>
-
-                    <p><b>Что сдавать</b> (после СПО)?</p>
-                    <p>Обязательные: русский язык, профильная математика, информационные технологии</p>
-
-                    <p><b>Бюджетные места:</b> 80</p>
-                    <p><b>Проходной балл(бюджет, 2023 г.):</b> 210</p>
-                    <p><b>Стоимость обучения (2023 г.):</b>125 900 руб</p>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="modalId_32" tabindex="-1" data-bs-keyboard="false" role="dialog"
-        aria-labelledby="modalTitleId" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg" role="document">
-            <div class="modal-content my-modal">
-                <div class="modal-header my-modal-title">
-                    <h5 class="text-center modal-title" id="modalTitleId">Профиль: «Медиаобразование»
-                    </h5>
-
-                </div>
-                <div class="modal-body">
-                    <p><b>Профиль:</b> Разработка игр и прикладных программ</p>
-                    <p><b>Форма обучения:</b></p>
-
-                    <p><b>Что сдавать</b> (по результатам ЕГЭ)?</p>
-                    <p>Обязательные: русский язык, профильная математика</p>
-                    <p>По выбору: информатика / физика / химия</p>
-
-                    <p><b>Что сдавать</b> (после СПО)?</p>
-                    <p>Обязательные: русский язык, профильная математика, информационные технологии</p>
-
-                    <p><b>Бюджетные места:</b> 80</p>
-                    <p><b>Проходной балл(бюджет, 2023 г.):</b> 210</p>
-                    <p><b>Стоимость обучения (2023 г.):</b>125 900 руб</p>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="modalId_33" tabindex="-1" data-bs-keyboard="false" role="dialog"
-        aria-labelledby="modalTitleId" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg" role="document">
-            <div class="modal-content my-modal">
-                <div class="modal-header my-modal-title">
-                    <h5 class="text-center modal-title" id="modalTitleId">Профиль: «Новые медиа и бизнес-коммуникации»
-                    </h5>
-
-                </div>
-                <div class="modal-body">
-                    <p><b>Профиль:</b> Разработка игр и прикладных программ</p>
-                    <p><b>Форма обучения:</b></p>
-
-                    <p><b>Что сдавать</b> (по результатам ЕГЭ)?</p>
-                    <p>Обязательные: русский язык, профильная математика</p>
-                    <p>По выбору: информатика / физика / химия</p>
-
-                    <p><b>Что сдавать</b> (после СПО)?</p>
-                    <p>Обязательные: русский язык, профильная математика, информационные технологии</p>
-
-                    <p><b>Бюджетные места:</b> 80</p>
-                    <p><b>Проходной балл(бюджет, 2023 г.):</b> 210</p>
-                    <p><b>Стоимость обучения (2023 г.):</b>125 900 руб</p>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-
-
-    <div class="modal fade" id="modalId_41" tabindex="-1" data-bs-keyboard="false" role="dialog"
-        aria-labelledby="modalTitleId" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg" role="document">
-            <div class="modal-content my-modal">
-                <div class="modal-header my-modal-title">
-                    <h5 class="text-center modal-title" id="modalTitleId">Профиль: «Рекламно-коммуникационная
-                        деятельность в сфере бизнеса»
-                    </h5>
-
-                </div>
-                <div class="modal-body">
-                    <p><b>Профиль:</b> Разработка игр и прикладных программ</p>
-                    <p><b>Форма обучения:</b></p>
-
-                    <p><b>Что сдавать</b> (по результатам ЕГЭ)?</p>
-                    <p>Обязательные: русский язык, профильная математика</p>
-                    <p>По выбору: информатика / физика / химия</p>
-
-                    <p><b>Что сдавать</b> (после СПО)?</p>
-                    <p>Обязательные: русский язык, профильная математика, информационные технологии</p>
-
-                    <p><b>Бюджетные места:</b> 80</p>
-                    <p><b>Проходной балл(бюджет, 2023 г.):</b> 210</p>
-                    <p><b>Стоимость обучения (2023 г.):</b>125 900 руб</p>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="modalId_42" tabindex="-1" data-bs-keyboard="false" role="dialog"
-        aria-labelledby="modalTitleId" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg" role="document">
-            <div class="modal-content my-modal">
-                <div class="modal-header my-modal-title">
-                    <h5 class="text-center modal-title" id="modalTitleId">Профиль: «Связи с общественностью в органах
-                        госуда-рственного и муни-ципального управления»
-                    </h5>
-
-                </div>
-                <div class="modal-body">
-                    <p><b>Профиль:</b> Разработка игр и прикладных программ</p>
-                    <p><b>Форма обучения:</b></p>
-
-                    <p><b>Что сдавать</b> (по результатам ЕГЭ)?</p>
-                    <p>Обязательные: русский язык, профильная математика</p>
-                    <p>По выбору: информатика / физика / химия</p>
-
-                    <p><b>Что сдавать</b> (после СПО)?</p>
-                    <p>Обязательные: русский язык, профильная математика, информационные технологии</p>
-
-                    <p><b>Бюджетные места:</b> 80</p>
-                    <p><b>Проходной балл(бюджет, 2023 г.):</b> 210</p>
-                    <p><b>Стоимость обучения (2023 г.):</b>125 900 руб</p>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="modalId_43" tabindex="-1" data-bs-keyboard="false" role="dialog"
-        aria-labelledby="modalTitleId" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg" role="document">
-            <div class="modal-content my-modal">
-                <div class="modal-header my-modal-title">
-                    <h5 class="text-center modal-title" id="modalTitleId">Профиль: «Корпоративные бренд-коммуникации»
-                    </h5>
-
-                </div>
-                <div class="modal-body">
-                    <p><b>Профиль:</b> Разработка игр и прикладных программ</p>
-                    <p><b>Форма обучения:</b></p>
-
-                    <p><b>Что сдавать</b> (по результатам ЕГЭ)?</p>
-                    <p>Обязательные: русский язык, профильная математика</p>
-                    <p>По выбору: информатика / физика / химия</p>
-
-                    <p><b>Что сдавать</b> (после СПО)?</p>
-                    <p>Обязательные: русский язык, профильная математика, информационные технологии</p>
-
-                    <p><b>Бюджетные места:</b> 80</p>
-                    <p><b>Проходной балл(бюджет, 2023 г.):</b> 210</p>
-                    <p><b>Стоимость обучения (2023 г.):</b>125 900 руб</p>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-
-
-    <div class="modal fade" id="modalId_51" tabindex="-1" data-bs-keyboard="false" role="dialog"
-        aria-labelledby="modalTitleId" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg" role="document">
-            <div class="modal-content my-modal">
-                <div class="modal-header my-modal-title">
-                    <h5 class="text-center modal-title" id="modalTitleId">Профиль: «Менеджмент креативных индустрий»
-                    </h5>
-
-                </div>
-                <div class="modal-body">
-                    <p><b>Профиль:</b> Разработка игр и прикладных программ</p>
-                    <p><b>Форма обучения:</b></p>
-
-                    <p><b>Что сдавать</b> (по результатам ЕГЭ)?</p>
-                    <p>Обязательные: русский язык, профильная математика</p>
-                    <p>По выбору: информатика / физика / химия</p>
-
-                    <p><b>Что сдавать</b> (после СПО)?</p>
-                    <p>Обязательные: русский язык, профильная математика, информационные технологии</p>
-
-                    <p><b>Бюджетные места:</b> 80</p>
-                    <p><b>Проходной балл(бюджет, 2023 г.):</b> 210</p>
-                    <p><b>Стоимость обучения (2023 г.):</b>125 900 руб</p>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="modalId_52" tabindex="-1" data-bs-keyboard="false" role="dialog"
-        aria-labelledby="modalTitleId" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg" role="document">
-            <div class="modal-content my-modal">
-                <div class="modal-header my-modal-title">
-                    <h5 class="text-center modal-title" id="modalTitleId">Профиль: «Менеджмент креативных индустрий»
-                    </h5>
-
-                </div>
-                <div class="modal-body">
-                    <p><b>Профиль:</b> Разработка игр и прикладных программ</p>
-                    <p><b>Форма обучения:</b></p>
-
-                    <p><b>Что сдавать</b> (по результатам ЕГЭ)?</p>
-                    <p>Обязательные: русский язык, профильная математика</p>
-                    <p>По выбору: информатика / физика / химия</p>
-
-                    <p><b>Что сдавать</b> (после СПО)?</p>
-                    <p>Обязательные: русский язык, профильная математика, информационные технологии</p>
-
-                    <p><b>Бюджетные места:</b> 80</p>
-                    <p><b>Проходной балл(бюджет, 2023 г.):</b> 210</p>
-                    <p><b>Стоимость обучения (2023 г.):</b>125 900 руб</p>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
+    {% endfor %}
 
     <script>
         const myModal = new bootstrap.Modal(document.getElementById('modalId'), options)
-
     </script>
-
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
@@ -1107,5 +490,3 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <script src="{% static 'mkmt/scripts/scriptFaculty.js' %}"></script>
 </body>
-
-</html>
