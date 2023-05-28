@@ -67,9 +67,15 @@
                                         <p class="card-text text-2"><b>Бюджетные места (УГНС, 2022):</b>
                                             {{b.budgetPlaces}}
                                         </p>
+                                        {% if b.greenWave %}
                                         <p class="card-text text-3"><b>Зеленая волна (2022):</b> {{b.greenWave}}</p>
+                                        {% endif %}
+
+                                        {% if b.passingScore %}
                                         <p class="card-text text-4"><b>Проходной балл (бюджетная основа, 2022 г.):</b>
                                             {{b.passingScore}}</p>
+                                        {% endif %}
+
                                         <p class="card-text text-1"><b>Стоимость обучения:</b></p>
                                         <ul class="">
                                             {% if b.priceFT %}
