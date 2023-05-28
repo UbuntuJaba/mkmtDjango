@@ -64,15 +64,15 @@
                                     <div class="card-body">
                                         <h4 class="card-title">{{b.title}}</h4>
                                         <p class="card-text text-1"><b>Форма обучения:</b> {{b.formOfEdu}}</p>
-                                        <p class="card-text text-2"><b>Бюджетные места (УГНС, 2022):</b>
+                                        <p class="card-text text-2"><b>Бюджетные места (УГНС, 2023):</b>
                                             {{b.budgetPlaces}}
                                         </p>
                                         {% if b.greenWave %}
-                                        <p class="card-text text-3"><b>Зеленая волна (2022):</b> {{b.greenWave}}</p>
+                                        <p class="card-text text-3"><b>Зеленая волна (2023):</b> {{b.greenWave}}</p>
                                         {% endif %}
 
                                         {% if b.passingScore %}
-                                        <p class="card-text text-4"><b>Проходной балл (бюджетная основа, 2022 г.):</b>
+                                        <p class="card-text text-4"><b>Проходной балл (бюджетная основа, 2023 г.):</b>
                                             {{b.passingScore}}</p>
                                         {% endif %}
 
@@ -130,6 +130,10 @@
                                     <div class="card-body">
                                         <h4 class="card-title">{{m.profile}}</h4>
                                         <p class="card-text text-1"><b>Форма обучения:</b> {{m.formOfEdu}}</p>
+                                        {% if m.budgetPlaces %}
+                                        <p class="card-text text-1"><b>Бюджетные места:</b> {{m.budgetPlaces}}</p>
+                                        {% endif %}
+                                        <p class="card-text text-1"><b>Вступительный экзамен:</b> {{m.exam}}</p>
                                         <p class="card-text text-1"><b>Срок обучения:</b></p>
                                         <ul class="">
                                             {% if m.trainingPeriodFT %}
@@ -160,12 +164,6 @@
                                             {% endif %}
                                         </ul>
 
-                                        <div class="div-btn">
-                                            <button type="button" class="btn my-btn btn-lg" data-bs-toggle="modal"
-                                                data-bs-target="#modalId_{{m.id}}">
-                                                Подробнее
-                                            </button>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -187,6 +185,10 @@
                                     <div class="card-body">
                                         <h4 class="card-title">{{m.profile}}</h4>
                                         <p class="card-text text-1"><b>Форма обучения:</b> {{m.formOfEdu}}</p>
+                                        {% if m.budgetPlaces %}
+                                        <p class="card-text text-1"><b>Бюджетные места:</b> {{m.budgetPlaces}}</p>
+                                        {% endif %}
+                                        <p class="card-text text-1"><b>Вступительный экзамен:</b> {{m.exam}}</p>
                                         <p class="card-text text-1"><b>Срок обучения:</b></p>
                                         <ul class="">
                                             {% if m.trainingPeriodFT %}
@@ -217,12 +219,6 @@
                                             {% endif %}
                                         </ul>
 
-                                        <div class="div-btn">
-                                            <button type="button" class="btn my-btn btn-lg" data-bs-toggle="modal"
-                                                data-bs-target="#modalId_{{m.id}}">
-                                                Подробнее
-                                            </button>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -245,6 +241,10 @@
                                     <div class="card-body">
                                         <h4 class="card-title">{{m.profile}}</h4>
                                         <p class="card-text text-1"><b>Форма обучения:</b> {{m.formOfEdu}}</p>
+                                        {% if m.budgetPlaces %}
+                                        <p class="card-text text-1"><b>Бюджетные места:</b> {{m.budgetPlaces}}</p>
+                                        {% endif %}
+                                        <p class="card-text text-1"><b>Вступительный экзамен:</b> {{m.exam}}</p>
                                         <p class="card-text text-1"><b>Срок обучения:</b></p>
                                         <ul class="">
                                             {% if m.trainingPeriodFT %}
@@ -275,12 +275,6 @@
                                             {% endif %}
                                         </ul>
 
-                                        <div class="div-btn">
-                                            <button type="button" class="btn my-btn btn-lg" data-bs-toggle="modal"
-                                                data-bs-target="#modalId_{{m.id}}">
-                                                Подробнее
-                                            </button>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -298,6 +292,10 @@
                                     <div class="card-body">
                                         <h4 class="card-title">{{m.profile}}</h4>
                                         <p class="card-text text-1"><b>Форма обучения:</b> {{m.formOfEdu}}</p>
+                                        {% if m.budgetPlaces %}
+                                        <p class="card-text text-1"><b>Бюджетные места:</b> {{m.budgetPlaces}}</p>
+                                        {% endif %}
+                                        <p class="card-text text-1"><b>Вступительный экзамен:</b> {{m.exam}}</p>
                                         <p class="card-text text-1"><b>Срок обучения:</b></p>
                                         <ul class="">
                                             {% if m.trainingPeriodFT %}
@@ -328,12 +326,6 @@
                                             {% endif %}
                                         </ul>
 
-                                        <div class="div-btn">
-                                            <button type="button" class="btn my-btn btn-lg" data-bs-toggle="modal"
-                                                data-bs-target="#modalId_{{m.id}}">
-                                                Подробнее
-                                            </button>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -352,6 +344,10 @@
                                     <div class="card-body">
                                         <h4 class="card-title">{{m.profile}}</h4>
                                         <p class="card-text text-1"><b>Форма обучения:</b> {{m.formOfEdu}}</p>
+                                        {% if m.budgetPlaces %}
+                                        <p class="card-text text-1"><b>Бюджетные места:</b> {{m.budgetPlaces}}</p>
+                                        {% endif %}
+                                        <p class="card-text text-1"><b>Вступительный экзамен:</b> {{m.exam}}</p>
                                         <p class="card-text text-1"><b>Срок обучения:</b></p>
                                         <ul class="">
                                             {% if m.trainingPeriodFT %}
@@ -382,12 +378,6 @@
                                             {% endif %}
                                         </ul>
 
-                                        <div class="div-btn">
-                                            <button type="button" class="btn my-btn btn-lg" data-bs-toggle="modal"
-                                                data-bs-target="#modalId_{{m.id}}">
-                                                Подробнее
-                                            </button>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
