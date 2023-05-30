@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="c436e368-decf-49a0-9fdd-171d1cc52cc7" name="dackendlaravel" url="http://194.58.111.176">
+        <fileTransfer rootFolder="/var/www/backendlaravel" accessType="SFTP" host="194.58.111.176" port="22" sshConfigId="98a66787-f730-4823-9b41-25b41ee92ae4" sshConfig="root@194.58.111.176:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" isUseRsync="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

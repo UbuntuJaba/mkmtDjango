@@ -128,7 +128,7 @@
                             <div class="col-xl-6 col-md-6 col-sm-12 d-flex justify-content-center">
                                 <div class="card my-card">
                                     <div class="card-body">
-                                        <h4 class="card-title">{{m.profile}}</h4>
+                                        <h4 class="card-title_2">{{m.profile}}</h4>
                                         <p class="card-text text-1"><b>Форма обучения:</b> {{m.formOfEdu}}</p>
                                         {% if m.budgetPlaces %}
                                         <p class="card-text text-1"><b>Бюджетные места:</b> {{m.budgetPlaces}}</p>
@@ -183,7 +183,7 @@
                             <div class="col-xl-4 col-md-12 d-flex justify-content-center">
                                 <div class="card my-card">
                                     <div class="card-body">
-                                        <h4 class="card-title">{{m.profile}}</h4>
+                                        <h4 class="card-title_2">{{m.profile}}</h4>
                                         <p class="card-text text-1"><b>Форма обучения:</b> {{m.formOfEdu}}</p>
                                         {% if m.budgetPlaces %}
                                         <p class="card-text text-1"><b>Бюджетные места:</b> {{m.budgetPlaces}}</p>
@@ -239,7 +239,7 @@
                             <div class="col-xl-4 col-md-12 d-flex justify-content-center">
                                 <div class="card my-card">
                                     <div class="card-body">
-                                        <h4 class="card-title">{{m.profile}}</h4>
+                                        <h4 class="card-title_2">{{m.profile}}</h4>
                                         <p class="card-text text-1"><b>Форма обучения:</b> {{m.formOfEdu}}</p>
                                         {% if m.budgetPlaces %}
                                         <p class="card-text text-1"><b>Бюджетные места:</b> {{m.budgetPlaces}}</p>
@@ -252,7 +252,7 @@
                                             {% endif %}
 
                                             {% if m.trainingPeriodPT %}
-                                            <li class="my-li">{{m.trainingPeriodPT}}</li>
+                                            <li class="my-li_2">{{m.trainingPeriodPT}}</li>
                                             {% endif %}
 
                                             {% if m.trainingPeriodDL %}
@@ -290,7 +290,7 @@
                             <div class="col--12 d-flex justify-content-center">
                                 <div class="card my-card">
                                     <div class="card-body">
-                                        <h4 class="card-title">{{m.profile}}</h4>
+                                        <h4 class="card-title_2">{{m.profile}}</h4>
                                         <p class="card-text text-1"><b>Форма обучения:</b> {{m.formOfEdu}}</p>
                                         {% if m.budgetPlaces %}
                                         <p class="card-text text-1"><b>Бюджетные места:</b> {{m.budgetPlaces}}</p>
@@ -342,7 +342,7 @@
                             <div class="col--12 d-flex justify-content-center">
                                 <div class="card my-card">
                                     <div class="card-body">
-                                        <h4 class="card-title">{{m.profile}}</h4>
+                                        <h4 class="card-title_2">{{m.profile}}</h4>
                                         <p class="card-text text-1"><b>Форма обучения:</b> {{m.formOfEdu}}</p>
                                         {% if m.budgetPlaces %}
                                         <p class="card-text text-1"><b>Бюджетные места:</b> {{m.budgetPlaces}}</p>
@@ -389,7 +389,9 @@
             </section>
             <footer class="footer">
                 <div class="footer_main">
-                    <a href="{% url 'index' %}"><h3 class="footer_header">Главное</h3></a>
+                    <a href="{% url 'index' %}">
+                        <h3 class="footer_header">Главное</h3>
+                    </a>
                     <ul class="footer_main_sub">
                         <li><a>Кафедры</a></li>
                         <li><a>Лица факультета</a></li>
@@ -397,14 +399,18 @@
                     </ul>
                 </div>
                 <div class="footer_faculty">
-                    <a href="{% url 'faculty' %}"><h3 class="footer_header">О факультете</h3></a>
+                    <a href="{% url 'faculty' %}">
+                        <h3 class="footer_header">О факультете</h3>
+                    </a>
                     <ul class="footer_faculty_sub">
                         <li><a>Сферы обучения</a></li>
                         <li><a>Техническое оснащение</a></li>
                     </ul>
                 </div>
                 <div class="footer_education">
-                    <a href="{% url 'education' %}"><h3 class="footer_header">Образование</h3></a>
+                    <a href="{% url 'education' %}">
+                        <h3 class="footer_header">Образование</h3>
+                    </a>
                     <ul class="footer_education_sub">
                         <li><a>Бакалавриат</a></li>
                         <li><a>Магистратура</a></li>
@@ -425,7 +431,9 @@
                     </ul>
                 </div>
                 <div class="footer_contacts">
-                    <a href="{% url 'contacts' %}"><h3 class="footer_header">Контакты</h3></a>
+                    <a href="{% url 'contacts' %}">
+                        <h3 class="footer_header">Контакты</h3>
+                    </a>
                     <ul class="footer_contacts_sub">
                         <li><a>Факультет МКиМТ</a></li>
                         <li><a>Декан факультета</a></li>
@@ -465,8 +473,8 @@
                     <p><b>Бюджетные места:</b> {{b.budgetPlaces}}</p>
                     <p><b>Проходной балл(бюджет, 2023 г.):</b> {{b.passingScore}}</p>
                     <p><b>Стоимость обучения (2023 г.):</b> {{b.priceFT}}
-                                                            {{b.pricePT}}
-                                                            {{b.priceDL}}</p>
+                        {{b.pricePT}}
+                        {{b.priceDL}}</p>
                 </div>
 
             </div>
@@ -477,7 +485,7 @@
     <script>
         const myModal = new bootstrap.Modal(document.getElementById('modalId'), options)
     </script>
-    
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
