@@ -157,6 +157,12 @@ body {
     border-radius: 36px;
 }
 
+.modal-body-e {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+}
 
 @media(max-width: 568px) {
     .direction_title {

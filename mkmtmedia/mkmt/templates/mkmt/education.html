@@ -460,7 +460,10 @@
                     </h5>
 
                 </div>
-                <div class="modal-body">
+                <div class="modal-body" style="
+                display: flex;
+                flex-direction: column;
+                gap:5px">
                     <p><b>Профиль:</b> {{b.profile}}</p>
                     <p><b>Форма обучения:</b> {{b.formOfEdu}}</p>
 
@@ -475,6 +478,14 @@
                     <p><b>Стоимость обучения (2023 г.):</b> {{b.priceFT}}
                         {{b.pricePT}}
                         {{b.priceDL}}</p>
+                    <div class="modal-button" style="
+                        display: flex;
+                        justify-content: center;">
+                        <button type="button" class="btn my-btn btn-lg" data-bs-toggle="modal" data-bs-target="#">
+                            Поступить
+                        </button>
+                    </div>
+
                 </div>
 
             </div>
