@@ -9,6 +9,7 @@ class studyingPrograms(models.Model):
     passingScore = models.IntegerField(blank = True, null = True, verbose_name='Проходной балл')
     profile = models.TextField(blank = True, verbose_name='Профиль обучения')
     ege = models.TextField(blank = True, verbose_name='ЕГЭ')
+    egeOptionally = models.TextField(blank = True, verbose_name='ЕГЭ По выбору')
     spo = models.TextField(blank = True, verbose_name='СПО')
     priceFT = models.TextField(blank = True, null = True, verbose_name='Стоимость очного обучения')
     pricePT = models.TextField(blank = True, null = True, verbose_name='Стоимость очно-заочного обучения')
