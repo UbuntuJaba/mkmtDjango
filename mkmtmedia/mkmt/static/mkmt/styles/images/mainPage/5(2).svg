@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Created with Vectornator (http://vectornator.io/) -->
+<svg height="100%" stroke-miterlimit="10" style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" version="1.1" viewBox="0 0 433 634" width="100%" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:vectornator="http://vectornator.io" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs/>
+<clipPath id="ArtboardFrame">
+<rect height="634" width="433" x="0" y="0"/>
+</clipPath>
+<g clip-path="url(#ArtboardFrame)" id="Слой-1" vectornator:layerName="Слой 1">
+<path d="M211.898 307.418C196.932 307.418 183.981 309.289 173.044 313.029C153.762 319.935 139.228 332.739 129.442 351.441L18.9258 346.262L62.9598 0.560595L407.892 0.560595L407.892 105.005L151.891 105.005L129.442 241.817C148.437 229.445 163.259 221.246 173.908 217.217C191.752 210.599 213.481 207.29 239.096 207.29C290.9 207.29 336.085 224.697 374.651 259.512C413.217 294.327 432.499 344.967 432.499 411.431C432.499 469.263 413.936 520.91 376.809 566.37C339.682 611.831 284.137 634.561 210.171 634.561C150.595 634.561 101.669 618.592 63.3914 586.655C25.1136 554.718 3.81612 509.401-0.500935 450.705L122.103 450.705C126.996 477.463 136.349 498.107 150.164 512.638C163.979 527.168 184.125 534.433 210.603 534.433C241.11 534.433 264.35 523.715 280.323 502.279C296.296 480.844 304.283 453.87 304.283 421.357C304.283 389.42 296.8 362.445 281.834 340.435C266.868 318.424 243.557 307.418 211.898 307.418Z" fill="#f4f1fc" fill-rule="nonzero" opacity="1" stroke="none" vectornator:layerName="path"/>
+</g>
+</svg>
